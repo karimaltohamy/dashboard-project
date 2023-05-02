@@ -1,7 +1,10 @@
+$primary-color: #1362fc;
+$dark-text: #324664;
+
 // start navbar
 .navbar_section {
   padding: 10px 20px;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid #e6e6e6;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -18,8 +21,9 @@
 
     .logo {
       h3 {
-        color: rgb(7, 96, 231);
+        font-size: 1.875rem;
         font-weight: 700;
+        color: $dark-text;
         margin-bottom: 0;
       }
     }
@@ -36,12 +40,19 @@
       border-radius: 5px;
 
       &:hover {
-        background-color: rgb(208, 208, 208);
+        background-color: rgb(233, 233, 233);
       }
 
       button {
         border: none;
         background-color: transparent;
+        background-color: $primary-color;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         &:after {
           display: none;
@@ -49,6 +60,7 @@
 
         i {
           font-size: 20px;
+          color: white;
         }
       }
     }
@@ -58,20 +70,39 @@
       border-radius: 5px;
 
       &:hover {
-        background-color: rgb(208, 208, 208);
+        background-color: rgb(233, 233, 233);
       }
 
       button {
         border: none;
         background-color: transparent;
-        font-size: 18px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
 
         &:after {
           display: none;
         }
 
-        i {
-          font-size: 18px;
+        img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+        }
+
+        .text {
+          h5 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 0;
+          }
+
+          span {
+            font-size: 12px;
+            transform: translateY(-3px);
+            display: block;
+            color: gray;
+          }
         }
       }
 
@@ -81,6 +112,12 @@
             display: flex;
             align-items: center;
             gap: 8px;
+            font-size: 13px;
+            font-weight: 500;
+
+            i {
+              color: $primary-color;
+            }
           }
         }
       }

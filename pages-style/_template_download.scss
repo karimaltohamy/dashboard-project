@@ -1,0 +1,67 @@
+.template_download {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  h4 {
+    margin-bottom: 0;
+  }
+}
+
+.warning {
+  padding: 20px !important;
+  margin-bottom: 20px;
+
+  li {
+    font-size: 15px;
+
+    &:last-of-type {
+      margin-bottom: 10px;
+    }
+  }
+
+  .form-check {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    input {
+      width: 17px;
+      height: 17px;
+    }
+  }
+}
+
+.import_from_excel {
+  background-color: white;
+  border: 1px solid #cfcfcf;
+  border-radius: 5px;
+  display: none;
+
+  &.active {
+    display: block;
+  }
+
+  .head {
+    border-bottom: 1px solid #cfcfcf;
+    padding: 10px 15px;
+    h3 {
+      font-size: 20px;
+      margin-bottom: 0;
+    }
+  }
+
+  .body {
+    padding: 10px 7px;
+
+    .input_file {
+      label {
+        display: block;
+        padding: 40px;
+        text-align: center;
+        border: 3px dashed #cfcfcf;
+        color: #1362fc;
+      }
+    }
+  }
+}

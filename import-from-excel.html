@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>dashboard project | sessions list</title>
+    <title>dashboard project | clients</title>
     <link rel="stylesheet" href="css/style.css" />
     <!-- boostrap -->
     <link
@@ -104,7 +104,11 @@
               </div>
 
               <div class="mini_list">
-                <div href="clients.html" class="item item_list" data-num="1">
+                <div
+                  href="clients.html"
+                  class="item item_list active"
+                  data-num="1"
+                >
                   <i class="fa-solid fa-angle-down arrow"></i>
                   <i class="fa-solid fa-user-group"></i>
                   <span>العملاء</span>
@@ -152,7 +156,7 @@
               </div>
 
               <div class="mini_list">
-                <a href="sessions-list.html" class="item active">
+                <a href="sessions-list.html" class="item">
                   <i class="fa-solid fa-laptop"></i>
                   <span>الجلسات</span>
                 </a>
@@ -161,126 +165,36 @@
           </div>
         </div>
         <div class="right">
-          <div class="table_container">
-            <div class="content">
-              <div class="toolbar_table">
-                <p>عدد البيانات التى تم العثور عليها : <span>1447</span></p>
-                <div class="btns">
-                  <div class="btn_filter">
-                    <i class="fa-solid fa-filter"></i>
-                  </div>
-                  <div class="btn_relaod">
-                    <i class="fa-solid fa-rotate"></i>
-                  </div>
-                </div>
-              </div>
+          <div class="template_download alert alert-info">
+            <h4>تحميل قالب ملف اكسيل</h4>
+            <a href="#">اضغط هنا</a>
+          </div>
 
-              <div class="head_tabel">
-                <div class="dropdown dropdown_operations">
-                  <button
-                    class="btn btn-secondary dropdown-toggle"
-                    type="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    <i class="fa-solid fa-wrench"></i>
-                    عمليات
-                  </button>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a class="dropdown-item" href="add-page.html">
-                        <i class="fa-solid fa-plus"></i>
-                        اضافه
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+          <div class="warning alert alert-warning">
+            <li>سيتم تجاهل العملاء الذين لديهم هاتف خاطئ</li>
+            <li>سيتم انشاء الجروب فى حالة عدم وجوده</li>
 
-                <div class="search_input">
-                  <input type="text" placeholder="ابحث" />
-                  <span>
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                  </span>
-                </div>
-              </div>
+            <div class="form-check">
+              <input
+                class="check_excle"
+                type="checkbox"
+                value=""
+                id="flexCheckDefault"
+              />
+              <label class="form-check-label" for="flexCheckDefault">
+                موافق
+              </label>
+            </div>
+          </div>
 
-              <div class="scroll_table">
-                <table>
-                  <thead>
-                    <tr>
-                      <th>الاسم</th>
-                      <th>الهاتف</th>
-                      <th>الحاله</th>
-                      <th>تاريخ الانشاء</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>PW2QA89K3SFJYhlo</td>
-                      <td>+201064017204</td>
-                      <td>غير متصل</td>
-                      <td>2023-04-27 14:58:14</td>
-                    </tr>
-                    <tr>
-                      <td>PW2QA89K3SFJYhlo</td>
-                      <td>+201064017204</td>
-                      <td>غير متصل</td>
-                      <td>2023-04-27 14:58:14</td>
-                    </tr>
-                    <tr>
-                      <td>PW2QA89K3SFJYhlo</td>
-                      <td>+201064017204</td>
-                      <td>غير متصل</td>
-                      <td>2023-04-27 14:58:14</td>
-                    </tr>
-                    <tr>
-                      <td>PW2QA89K3SFJYhlo</td>
-                      <td>+201064017204</td>
-                      <td>غير متصل</td>
-                      <td>2023-04-27 14:58:14</td>
-                    </tr>
-                    <tr>
-                      <td>PW2QA89K3SFJYhlo</td>
-                      <td>+201064017204</td>
-                      <td>غير متصل</td>
-                      <td>2023-04-27 14:58:14</td>
-                    </tr>
-                    <tr>
-                      <td>PW2QA89K3SFJYhlo</td>
-                      <td>+201064017204</td>
-                      <td>غير متصل</td>
-                      <td>2023-04-27 14:58:14</td>
-                    </tr>
-                    <tr>
-                      <td>PW2QA89K3SFJYhlo</td>
-                      <td>+201064017204</td>
-                      <td>غير متصل</td>
-                      <td>2023-04-27 14:58:14</td>
-                    </tr>
-                    <tr>
-                      <td>PW2QA89K3SFJYhlo</td>
-                      <td>+201064017204</td>
-                      <td>غير متصل</td>
-                      <td>2023-04-27 14:58:14</td>
-                    </tr>
-                    <tr>
-                      <td>PW2QA89K3SFJYhlo</td>
-                      <td>+201064017204</td>
-                      <td>غير متصل</td>
-                      <td>2023-04-27 14:58:14</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-
-              <div class="pagination">
-                <div class="btns">
-                  <button><i class="fa-solid fa-angle-right"></i></button>
-                  <button class="active">1</button>
-                  <button>2</button>
-                  <button><i class="fa-solid fa-angle-left"></i></button>
-                </div>
-                <p>Showing <span>1</span> to <span>10</span> of 20 entries</p>
+          <div class="import_from_excel">
+            <div class="head">
+              <h3>استيراد من اكسيل</h3>
+            </div>
+            <div class="body">
+              <div class="input_file">
+                <input id="file" type="file" class="d-none" />
+                <label for="file">اضغط هنا لاختيار الملف</label>
               </div>
             </div>
           </div>

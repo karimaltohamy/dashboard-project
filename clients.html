@@ -65,12 +65,15 @@
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
-            <i class="fa-solid fa-user"></i>
-            djaries
+            <img src="images/img-profile.jpg" alt="" />
+            <div class="text">
+              <h5>John Doe</h5>
+              <span>Superadmin</span>
+            </div>
           </button>
           <ul class="dropdown-menu">
             <li>
-              <a class="dropdown-item" href="#">
+              <a class="dropdown-item" href="profile-page.html">
                 <i class="fa-solid fa-user"></i>
                 الملف الشخصي
               </a>
@@ -93,26 +96,71 @@
         <div class="left">
           <div class="sidebar">
             <div class="items">
-              <a href="index.html" class="item">
-                <i class="bx bxs-grid-alt"></i>
-                <span>الرئيسيه</span>
-              </a>
-              <a href="clients.html" class="item active">
-                <i class="fa-solid fa-user-group"></i>
-                <span>العملاء</span>
-              </a>
-              <a href="groups.html" class="item">
-                <i class="fa-solid fa-users"></i>
-                <span>المجموعات</span>
-              </a>
-              <a href="messages-list.html" class="item">
-                <i class="fa-solid fa-message"></i>
-                <span>الرسائل</span>
-              </a>
-              <a href="sessions-list.html" class="item">
-                <i class="fa-solid fa-laptop"></i>
-                <span>الجلسات</span>
-              </a>
+              <div class="mini_list">
+                <a href="index.html" class="item">
+                  <i class="bx bxs-grid-alt"></i>
+                  <span>الرئيسيه</span>
+                </a>
+              </div>
+
+              <div class="mini_list">
+                <div
+                  href="clients.html"
+                  class="item item_list active"
+                  data-num="1"
+                >
+                  <i class="fa-solid fa-angle-down arrow"></i>
+                  <i class="fa-solid fa-user-group"></i>
+                  <span>العملاء</span>
+                </div>
+
+                <ul class="list list1">
+                  <li>
+                    <span></span>
+                    <a href="clients.html">العملاء</a>
+                  </li>
+                  <li>
+                    <span></span>
+                    <a href="import-from-excel.html">استيراد من اكسيل</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="mini_list">
+                <a href="groups.html" class="item">
+                  <i class="fa-solid fa-users"></i>
+                  <span>المجموعات</span>
+                </a>
+              </div>
+              <div class="mini_list">
+                <div
+                  href="messages-list.html"
+                  class="item item_list"
+                  data-num="2"
+                >
+                  <i class="fa-solid fa-angle-down arrow"></i>
+                  <i class="fa-solid fa-message"></i>
+                  <span>الرسائل</span>
+                </div>
+
+                <ul class="list list2">
+                  <li>
+                    <span></span>
+                    <a href="messages-list.html">قائمه الرسائل</a>
+                  </li>
+                  <li>
+                    <span></span>
+                    <a href="templates-messages.html">القوالب</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="mini_list">
+                <a href="sessions-list.html" class="item">
+                  <i class="fa-solid fa-laptop"></i>
+                  <span>الجلسات</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>

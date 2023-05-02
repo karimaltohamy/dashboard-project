@@ -1,0 +1,75 @@
+$primary-color: #1362fc;
+$dark-text: #324664;
+
+// start head_section
+.head_section {
+  color: $dark-text;
+  margin-top: 15px;
+}
+// end head_section
+
+// start content_profile
+.content_profile {
+  margin: 20px;
+  display: flex;
+  gap: 40px;
+
+  .left {
+    width: 35%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+
+    .main_info {
+      text-align: center;
+      img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+      }
+
+      h5 {
+        font-size: 22px;
+        margin-bottom: 0;
+        color: $dark-text;
+      }
+
+      span {
+        color: $dark-text;
+        font-size: 15px;
+      }
+
+      .btns {
+        margin-top: 20px;
+
+        button {
+          border: none;
+          background-color: transparent;
+          color: white;
+          padding: 8px 20px;
+          border-radius: 8px;
+        }
+
+        .btn_main {
+          background-color: $primary-color;
+        }
+
+        .btn_info {
+          background-color: $dark-text;
+        }
+      }
+    }
+  }
+
+  .right {
+    width: 65%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+  }
+}
+// end content_profile
