@@ -1,0 +1,268 @@
+// start table_container
+.table_container {
+  height: 100%;
+  padding: 15px;
+
+  .content {
+    background-color: white;
+    border-left: 1px solid #cfcfcf;
+    border-right: 1px solid #cfcfcf;
+    border-bottom: 1px solid #cfcfcf;
+
+    .toolbar_table {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: rgb(26, 26, 26);
+      color: white;
+
+      p {
+        margin-bottom: 0;
+        padding: 0 10px;
+      }
+
+      .btns {
+        display: flex;
+        align-items: center;
+
+        .btn_filter,
+        .btn_relaod {
+          padding: 7px;
+          font-size: 20px;
+          border: 1px solid white;
+          cursor: pointer;
+          position: relative;
+
+          &::before {
+            position: absolute;
+            bottom: -35px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgb(169, 169, 169);
+            border-radius: 5px;
+            padding: 5px;
+            font-size: 14px;
+            transition: all 0.3s;
+            opacity: 0;
+          }
+
+          &:hover {
+            &::before {
+              opacity: 1;
+            }
+          }
+        }
+
+        .btn_filter {
+          &::before {
+            content: "تصفيه";
+          }
+        }
+
+        .btn_relaod {
+          &::before {
+            content: "تحميل";
+          }
+        }
+      }
+    }
+
+    .head_tabel {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 10px;
+      border-top: 1px solid #cfcfcf;
+      border-bottom: 1px solid #cfcfcf;
+      padding: 15px 10px;
+
+      .search_input {
+        border: 1px solid rgb(171, 171, 171);
+        display: flex;
+        width: 100%;
+        max-width: 500px;
+
+        input {
+          border: none;
+          outline: none;
+          padding: 0 10px;
+          width: 100%;
+        }
+
+        span {
+          padding: 6px 10px;
+          background-color: gray;
+
+          i {
+            color: white;
+          }
+        }
+      }
+    }
+
+    table {
+      width: 100%;
+      text-align: center;
+
+      thead {
+        tr {
+          border-bottom: 1px solid #cfcfcf;
+          th {
+            color: gray;
+            padding: 10px 0;
+          }
+        }
+      }
+
+      tbody {
+        tr {
+          &:nth-child(even) {
+            background-color: #f5f5f5;
+          }
+
+          &:last-child {
+            border-bottom: 1px solid #cfcfcf;
+          }
+
+          td {
+            font-weight: 400;
+            color: gray;
+            padding: 15px 0;
+
+            &:nth-child(1) {
+              color: #0d6efd;
+            }
+          }
+        }
+      }
+    }
+
+    .pagination {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px;
+
+      p {
+        margin-bottom: 0;
+        font-size: 15px;
+        color: gray;
+      }
+
+      .btns {
+        display: flex;
+        align-items: center;
+        button {
+          border: none;
+          background-color: transparent;
+          color: #0d6efd;
+          font-weight: 500;
+          font-size: 16px;
+          padding: 0px 10px;
+          border-radius: 3px;
+
+          &.active {
+            background-color: #0d6efd;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .table_container {
+    padding: 8px;
+
+    .content {
+      .toolbar_table {
+        p {
+          font-size: 13px;
+        }
+
+        .btns {
+          .btn_filter,
+          .btn_relaod {
+            padding: 5px;
+            font-size: 13px;
+          }
+        }
+      }
+
+      .head_tabel {
+        flex-direction: column;
+        gap: 10px;
+        padding: 7px;
+
+        .dropdown_operations {
+          width: 100%;
+
+          button {
+            width: 100%;
+            font-size: 15px;
+            padding: 3px;
+            border-radius: 4px;
+          }
+        }
+
+        .search_input {
+          max-width: 100%;
+
+          input {
+            font-size: 15px;
+          }
+
+          span {
+            padding: 2px 8px;
+            font-size: 15px;
+          }
+        }
+      }
+
+      .scroll_table {
+        overflow-x: auto;
+        width: 100%;
+
+        table {
+          overflow-x: auto;
+
+          thead {
+            tr {
+              th {
+                padding: 4px 0;
+                font-size: 15px;
+              }
+            }
+          }
+
+          tbody {
+            tr {
+              td {
+                padding: 8px 0;
+                font-size: 14px;
+                min-width: 150px;
+              }
+            }
+          }
+        }
+      }
+
+      .pagination {
+        padding: 7px;
+
+        p {
+          font-size: 12px;
+        }
+
+        .btns {
+          button {
+            font-size: 12px;
+            padding: 0px 8px;
+          }
+        }
+      }
+    }
+  }
+}
+// end table_container

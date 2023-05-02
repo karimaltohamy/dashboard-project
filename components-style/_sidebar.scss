@@ -1,0 +1,42 @@
+// start sidebar
+.sidebar {
+  background-color: #1f2837;
+  height: 100%;
+  color: white;
+
+  .items {
+    padding-top: 20px;
+
+    .item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 25px;
+      transition: all 0.3s;
+      cursor: pointer;
+      color: inherit !important;
+
+      &:hover {
+        background-color: #181f2b;
+      }
+
+      &.active {
+        background-color: #181f2b;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
+
+      i {
+        font-size: 20px;
+      }
+
+      span {
+        font-size: 19px;
+        font-weight: 400;
+      }
+    }
+  }
+}
+// end sidebar
