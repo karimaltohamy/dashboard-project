@@ -63,6 +63,23 @@ $dark-text: #324664;
           color: white;
         }
       }
+
+      .dropdown-menu {
+        li {
+          a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+
+            img {
+              width: 25px;
+              height: 25px;
+              border-radius: 50%;
+            }
+          }
+        }
+      }
     }
 
     .dropdown_profile {

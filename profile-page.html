@@ -54,8 +54,18 @@
             <i class="fa-solid fa-earth-americas"></i>
           </button>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">العربيه</a></li>
-            <li><a class="dropdown-item" href="#">english</a></li>
+            <li>
+              <a class="dropdown-item" href="#">
+                <img src="images/ar.png" alt="" />
+                العربيه</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">
+                <img src="images/en.png" alt="" />
+                english
+              </a>
+            </li>
           </ul>
         </div>
         <div class="dropdown dropdown_profile">
@@ -153,6 +163,12 @@
                   <span>الجلسات</span>
                 </a>
               </div>
+              <div class="mini_list">
+                <a href="links-shortcut.html" class="item">
+                  <i class="fa-solid fa-link"></i>
+                  <span>اختصار الروابط</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -167,13 +183,69 @@
                 <img src="images/img-profile.jpg" alt="" />
                 <h5>John Doe</h5>
                 <span>hossam.ios95@gmail.com</span>
+                <div class="more_info">
+                  <p>الخطه: <span>special_3</span></p>
+                  <p>النقاط اليوميه: <span>1500</span></p>
+                </div>
                 <div class="btns">
                   <button class="btn_main">تعديل الحساب</button>
                   <button class="btn_info">تغير كلمه السر</button>
                 </div>
               </div>
             </div>
-            <div class="right"></div>
+            <div class="right">
+              <h4>تفاصيل الحساب</h4>
+              <form action="">
+                <div class="row account_details">
+                  <div class="col-12 col-md-6">
+                    <div class="input_item">
+                      <label for="">Api Token</label>
+                      <input
+                        type="text"
+                        placeholder=""
+                        value="cOTnFv4dRv5i4Fg6zpvdFoqVhwRJTNPITo6mHaXWv5sKuD4ixU4TseqSGUW9"
+                        disabled
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <div class="input_item">
+                      <label for="">الاسم</label>
+                      <input
+                        type="text"
+                        placeholder=""
+                        value="John Doe"
+                        disabled
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <div class="input_item">
+                      <label for="">الهاتف</label>
+                      <input
+                        type="text"
+                        placeholder=""
+                        value="010498578"
+                        disabled
+                      />
+                    </div>
+                  </div>
+                </div>
+                <button class="btn_update">تعديل</button>
+              </form>
+
+              <form action="" class="change_password">
+                <div class="input_item">
+                  <label for="">ادخل كلمه المرور الجديده</label>
+                  <input type="text" placeholder="" />
+                </div>
+                <div class="input_item">
+                  <label for="">ادخل كلمة المرور مجددا</label>
+                  <input type="text" placeholder="" />
+                </div>
+                <button class="btn_change">تغيير كلمه السر</button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
@@ -181,5 +253,35 @@
     <!-- end main -->
 
     <script src="js/main.js"></script>
+    <script>
+      const btnMain = document.querySelector(".content_profile .btn_main");
+      const inputs = document.querySelectorAll(
+        ".account_details .input_item input"
+      );
+      const btnUpdate = document.querySelector(".btn_update");
+
+      btnMain.addEventListener("click", () => {
+        inputs.forEach((input) => input.removeAttribute("disabled"));
+        btnMain.classList.add("remove");
+        btnUpdate.classList.add("active");
+      });
+
+      btnUpdate.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        inputs.forEach((input) => input.setAttribute("disabled", ""));
+        btnMain.classList.remove("remove");
+        btnUpdate.classList.remove("active");
+      });
+
+      //  habdle change password
+      const btnInfo = document.querySelector(".content_profile .btn_info");
+      const changePasswordForm = document.querySelector(".change_password");
+
+      btnInfo.addEventListener("click", () => {
+        changePasswordForm.classList.add("active");
+        btnInfo.classList.add("remove");
+      });
+    </script>
   </body>
 </html>

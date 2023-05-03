@@ -1,9 +1,10 @@
 // start sidebar
 .sidebar {
-  background-color: #1362fc;
+  background-color: white;
   height: 100%;
-  color: white;
+  color: #526484;
   padding: 0 10px 10px;
+  border-left: 1px solid #e6e6e6;
 
   .items {
     padding-top: 20px;
@@ -22,10 +23,12 @@
 
         &:hover {
           background-color: #598ff9;
+          color: white !important;
         }
 
         &.active {
           background-color: #598ff9;
+          color: white !important;
         }
 
         i {
@@ -38,7 +41,7 @@
 
         span {
           font-size: 19px;
-          font-weight: 400;
+          font-weight: 600;
         }
       }
 
@@ -72,12 +75,12 @@
             width: 10px;
             height: 2px;
             border-radius: 20px;
-            background-color: white;
+            background-color: #526484;
             transition: all 0.3s;
           }
 
           a {
-            color: white;
+            color: #526484;
           }
         }
       }

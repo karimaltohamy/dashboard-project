@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>dashboard project | messages list</title>
+    <title>dashboard project</title>
     <link rel="stylesheet" href="css/style.css" />
     <!-- boostrap -->
     <link
@@ -139,7 +139,11 @@
                 </a>
               </div>
               <div class="mini_list">
-                <div class="item item_list active" data-num="2">
+                <div
+                  href="messages-list.html"
+                  class="item item_list"
+                  data-num="2"
+                >
                   <i class="fa-solid fa-angle-down arrow"></i>
                   <i class="fa-solid fa-message"></i>
                   <span>الرسائل</span>
@@ -164,7 +168,7 @@
                 </a>
               </div>
               <div class="mini_list">
-                <a href="links-shortcut.html" class="item">
+                <a href="links-shortcut.html" class="item active">
                   <i class="fa-solid fa-link"></i>
                   <span>اختصار الروابط</span>
                 </a>
@@ -173,47 +177,44 @@
           </div>
         </div>
         <div class="right">
-          <div class="create_template">
-            <div class="head_section">
-              <h3>الملف الشخصي</h3>
+          <div class="head_section">
+            <h4>اختصار الروابط</h4>
+          </div>
+
+          <div class="links_shortcut">
+            <div class="btns">
+              <button class="btn_write">كتابه الروابط</button>
+              <button class="btn_upload_file">رفع ملف</button>
             </div>
-            <div class="form_create_template">
-              <h5>كيف اقوم بانشاء قالب؟</h5>
-              <form action="">
-                <div class="input_item">
-                  <label for="">اسم القالب</label>
-                  <input type="text" placeholder="اكتب اسم القالب هنا" />
-                </div>
 
-                <div class="input_send">
-                  <span>ارسال بعد</span>
-                  <input type="number" placeholder="0" />
-                  <span>ساعه/ساعات</span>
-                </div>
+            <form action="" class="form_upload_file">
+              <div class="input_item">
+                <span>الملف</span>
+                <label for="file_links">قم بتحديد ملف الexcel</label>
+                <input
+                  type="file"
+                  class="d-none"
+                  id="file_links"
+                  placeholder=""
+                />
+              </div>
+              <div class="input_item">
+                <label for="">الاعمده</label>
+                <input
+                  type="text"
+                  placeholder="الاعمده(مفصول بينهم ب , مثال url, link)"
+                />
+              </div>
+              <button class="btn_shortcut">اختصار الروابط</button>
+            </form>
 
-                <div class="select_lang">
-                  <div class="input_radio">
-                    <label for="ar">العربيه</label>
-                    <input type="radio" id="ar" name="fav_language" />
-                  </div>
-                  <div class="input_radio">
-                    <label for="en">English</label>
-                    <input type="radio" id="en" name="fav_language" />
-                  </div>
-                </div>
-
-                <div class="input_item">
-                  <label for="">محتوي القالب</label>
-                  <textarea
-                    name=""
-                    id=""
-                    placeholder="اكتب القالب هنا"
-                  ></textarea>
-                </div>
-
-                <button class="btn_save">حفظ القالب</button>
-              </form>
-            </div>
+            <form action="" class="form_write_links">
+              <div class="input_item">
+                <label for="">الاعمده</label>
+                <textarea name="" id=""></textarea>
+              </div>
+              <button class="btn_shortcut">اختصار الروابط</button>
+            </form>
           </div>
         </div>
       </div>
@@ -221,5 +222,27 @@
     <!-- end main -->
 
     <script src="js/main.js"></script>
+    <script>
+      const formWriteLinks = document.querySelector(".form_write_links");
+      const formUploadFile = document.querySelector(".form_upload_file");
+      const btnWrite = document.querySelector(".links_shortcut .btn_write");
+      const btnUploadFile = document.querySelector(
+        ".links_shortcut .btn_upload_file"
+      );
+
+      btnWrite.addEventListener("click", () => {
+        formWriteLinks.classList.add("active");
+        formUploadFile.classList.add("remove");
+        btnUploadFile.classList.add("active");
+        btnWrite.classList.add("remove");
+      });
+
+      btnUploadFile.addEventListener("click", () => {
+        formWriteLinks.classList.remove("active");
+        formUploadFile.classList.remove("remove");
+        btnUploadFile.classList.remove("active");
+        btnWrite.classList.remove("remove");
+      });
+    </script>
   </body>
 </html>

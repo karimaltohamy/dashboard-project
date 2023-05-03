@@ -43,6 +43,19 @@ $dark-text: #324664;
         font-size: 15px;
       }
 
+      .more_info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 10px;
+
+        p {
+          margin-bottom: 0;
+          color: $dark-text;
+          font-size: 15px;
+        }
+      }
+
       .btns {
         margin-top: 20px;
 
@@ -56,10 +69,18 @@ $dark-text: #324664;
 
         .btn_main {
           background-color: $primary-color;
+
+          &.remove {
+            display: none;
+          }
         }
 
         .btn_info {
           background-color: $dark-text;
+
+          &.remove {
+            display: none;
+          }
         }
       }
     }
@@ -69,7 +90,151 @@ $dark-text: #324664;
     width: 65%;
     background-color: white;
     border-radius: 10px;
-    padding: 15px;
+
+    h4 {
+      font-size: 22px;
+      margin-bottom: 0;
+      border-bottom: 1px solid #dadada;
+      color: $dark-text;
+      padding: 15px;
+    }
+
+    form {
+      padding: 15px;
+
+      &.change_password {
+        display: none;
+
+        &.active {
+          display: block;
+        }
+      }
+
+      .input_item {
+        margin-bottom: 10px;
+
+        label {
+          font-weight: 500;
+          color: $dark-text;
+          margin-bottom: 4px;
+        }
+
+        input {
+          width: 100%;
+          padding: 6px;
+          border-radius: 6px;
+          border: 1px solid #dadada;
+        }
+      }
+
+      .btn_update {
+        border: none;
+        background-color: $primary-color;
+        border-radius: 5px;
+        color: white;
+        padding: 5px 20px;
+        font-weight: 500;
+        display: none;
+
+        &.active {
+          display: inline-block;
+        }
+      }
+
+      .btn_change {
+        border: none;
+        background-color: $primary-color;
+        border-radius: 5px;
+        color: white;
+        padding: 5px 20px;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .head_section {
+    margin-top: 0;
+
+    h3 {
+      font-size: 20px;
+    }
+  }
+  .content_profile {
+    margin: 0;
+    gap: 20px;
+    flex-direction: column;
+
+    .left,
+    .right {
+      width: 100%;
+    }
+
+    .left {
+      padding: 10px;
+
+      .main_info {
+        img {
+          width: 110px;
+          height: 110px;
+          margin-bottom: 5px;
+        }
+
+        h5 {
+          font-size: 19px;
+        }
+
+        > span {
+          font-size: 13px;
+          transform: translateY(-5px);
+          display: block;
+        }
+
+        .more_info {
+          gap: 10px;
+          margin-top: 0;
+
+          p {
+            font-size: 13px;
+          }
+        }
+
+        .btns {
+          margin-top: 5px;
+
+          button {
+            padding: 4px 15px;
+            font-size: 12px;
+            border-radius: 8px;
+          }
+        }
+      }
+    }
+
+    .right {
+      h4 {
+        font-size: 16px;
+        padding: 10px;
+      }
+
+      form {
+        padding: 9px;
+
+        .input_item {
+          margin-bottom: 5px;
+
+          label {
+            font-size: 14px;
+          }
+
+          input {
+            padding: 4px;
+            font-size: 12px;
+          }
+        }
+      }
+    }
   }
 }
 // end content_profile

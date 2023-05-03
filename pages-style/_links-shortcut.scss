@@ -1,0 +1,187 @@
+$primary-color: #1362fc;
+$dark-text: #324664;
+
+// start links_shortcut
+.links_shortcut {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+
+  .btns {
+    margin-bottom: 10px;
+
+    button {
+      padding: 4px 20px;
+      font-size: 15px;
+      color: white;
+      border: none;
+      border-radius: 7px;
+    }
+
+    .btn_write {
+      background-color: $dark-text;
+
+      &.remove {
+        display: none;
+      }
+    }
+
+    .btn_upload_file {
+      background-color: $primary-color;
+      display: none;
+
+      &.active {
+        display: inline-block;
+      }
+    }
+  }
+
+  .input_item {
+    margin-bottom: 10px;
+
+    label {
+      display: block;
+      font-size: 20px;
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      border-radius: 5px;
+      padding: 5px;
+      border: 1px solid #cfcfcf;
+      background: #eff1f6;
+    }
+
+    textarea {
+      height: 250px;
+    }
+  }
+
+  .form_upload_file {
+    &.remove {
+      display: none;
+    }
+
+    .input_item {
+      &:nth-child(1) {
+        overflow: hidden;
+        span {
+          display: block;
+          margin-bottom: 5px;
+          font-weight: 500;
+          font-size: 20px;
+        }
+
+        label {
+          padding: 8px;
+          background: #eff1f6;
+          text-align: left;
+          font-size: 15px;
+          border-radius: 5px;
+          width: 100%;
+          position: relative;
+          cursor: pointer;
+
+          &::after {
+            content: "استعراض";
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            padding: 0 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #e2e7f5;
+          }
+        }
+      }
+    }
+  }
+
+  .form_write_links {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  .btn_shortcut {
+    padding: 8px 25px;
+    background-color: $dark-text;
+    color: white;
+    border: none;
+    border-radius: 7px;
+  }
+}
+
+@media (max-width: 768px) {
+  .head_section {
+    h4 {
+      font-size: 18px;
+      margin-bottom: 0;
+    }
+  }
+
+  .links_shortcut {
+    .btns {
+      button {
+        padding: 3px 15px;
+        font-size: 12px;
+      }
+    }
+
+    .input_item {
+      margin-bottom: 5px;
+
+      label {
+        font-size: 17px;
+
+        margin-bottom: 2px;
+      }
+
+      input,
+      textarea {
+        padding: 3px 7px;
+      }
+
+      textarea {
+        height: 100px;
+      }
+    }
+
+    .form_upload_file {
+      &.remove {
+        display: none;
+      }
+
+      .input_item {
+        &:nth-child(1) {
+          span {
+            margin-bottom: 2px;
+            font-size: 17px;
+          }
+          label {
+            padding: 4px 10px;
+
+            &::after {
+              font-size: 13px;
+            }
+          }
+        }
+      }
+    }
+
+    .btn_shortcut {
+      padding: 4px 15px;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+  }
+}
+// end links_shortcut
