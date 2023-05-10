@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>dashboard project | clients</title>
+    <title>dashboard project | Courses</title>
     <link rel="stylesheet" href="css/style.css" />
     <!-- boostrap -->
     <link
@@ -25,11 +25,6 @@
       integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
-    />
-    <!-- Boxicons CSS -->
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
     />
   </head>
   <body>
@@ -114,11 +109,7 @@
               </div>
 
               <div class="mini_list">
-                <div
-                  href="clients.html"
-                  class="item item_list active"
-                  data-num="1"
-                >
+                <div href="clients.html" class="item item_list" data-num="1">
                   <i class="fa-solid fa-angle-down arrow"></i>
                   <i class="fa-solid fa-user-group"></i>
                   <span>العملاء</span>
@@ -144,7 +135,7 @@
               </div>
 
               <div class="mini_list">
-                <a href="courses-page.html" class="item">
+                <a href="courses-page.html" class="item active">
                   <i class="fa-solid fa-graduation-cap"></i>
                   <span>الكورسات</span>
                 </a>
@@ -191,22 +182,29 @@
         <div class="right">
           <div class="table_container">
             <div class="content">
+              <div class="toolbar_table">
+                <p>عدد البيانات التى تم العثور عليها : <span>1447</span></p>
+                <div class="btns">
+                  <div class="btn_filter">
+                    <i class="fa-solid fa-filter"></i>
+                  </div>
+                  <div class="btn_relaod">
+                    <i class="fa-solid fa-rotate"></i>
+                  </div>
+                </div>
+              </div>
+
               <div class="head_tabel">
-                <button class="btn_add btn_add_client">
+                <button class="btn_add">
                   <i class="fa-solid fa-plus"></i>
-                  اضافه عميل
+                  اضافه كورس
                 </button>
 
-                <div class="info_head_table">
-                  <div class="search_input">
-                    <input type="text" placeholder="ابحث" />
-                    <span>
-                      <i class="fa-solid fa-magnifying-glass"></i>
-                    </span>
-                  </div>
-                  <button class="btn_filter">
-                    <i class="fa-solid fa-filter"></i> فلتر
-                  </button>
+                <div class="search_input">
+                  <input type="text" placeholder="ابحث" />
+                  <span>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </span>
                 </div>
               </div>
 
@@ -215,121 +213,120 @@
                   <thead>
                     <tr>
                       <th>#</th>
-                      <th>الاسم</th>
-                      <th>المجموعه</th>
-                      <th>الهاتف</th>
-                      <th>الهواتف</th>
-                      <th>ملاحظات</th>
+                      <th>اسم الكورس</th>
+                      <th>نوع الكورس</th>
+                      <th>وقت الكورس</th>
+                      <th>عدد الدروس</th>
                       <th>تاريخ الانشاء</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
                       <td>1</td>
-                      <td><a href="profile-student.html">محمد حسن</a></td>
-                      <td>يونس نت نيره</td>
-                      <td>+201155575986</td>
-                      <td>1</td>
-                      <td></td>
+                      <td>
+                        <a href="profile-course.html">
+                          Learn Figma - UI/UX Design Essential Training
+                        </a>
+                      </td>
+                      <td>UI/UX Design</td>
+                      <td>2 س 56 د</td>
+                      <td>12 درس</td>
                       <td>2023-04-27 14:58:14</td>
                     </tr>
                     <tr>
-                      <td>1</td>
-                      <td><a href="profile-student.html">محمد حسن</a></td>
-                      <td>يونس نت نيره</td>
-                      <td>+201155575986</td>
-                      <td>1</td>
-                      <td></td>
+                      <td>2</td>
+                      <td>
+                        <a href="profile-course.html">
+                          Learn Figma - UI/UX Design Essential Training
+                        </a>
+                      </td>
+                      <td>UI/UX Design</td>
+                      <td>2 س 56 د</td>
+                      <td>12 درس</td>
                       <td>2023-04-27 14:58:14</td>
                     </tr>
                     <tr>
-                      <td>1</td>
-                      <td><a href="profile-student.html">محمد حسن</a></td>
-                      <td>يونس نت نيره</td>
-                      <td>+201155575986</td>
-                      <td>1</td>
-                      <td></td>
+                      <td>3</td>
+                      <td>
+                        <a href="profile-course.html">
+                          Learn Figma - UI/UX Design Essential Training
+                        </a>
+                      </td>
+                      <td>UI/UX Design</td>
+                      <td>2 س 56 د</td>
+                      <td>12 درس</td>
                       <td>2023-04-27 14:58:14</td>
                     </tr>
                     <tr>
-                      <td>1</td>
-                      <td><a href="profile-student.html">محمد حسن</a></td>
-                      <td>يونس نت نيره</td>
-                      <td>+201155575986</td>
-                      <td>1</td>
-                      <td></td>
+                      <td>4</td>
+                      <td>
+                        <a href="profile-course.html">
+                          Learn Figma - UI/UX Design Essential Training
+                        </a>
+                      </td>
+                      <td>UI/UX Design</td>
+                      <td>2 س 56 د</td>
+                      <td>12 درس</td>
                       <td>2023-04-27 14:58:14</td>
                     </tr>
                     <tr>
-                      <td>1</td>
-                      <td><a href="profile-student.html">محمد حسن</a></td>
-                      <td>يونس نت نيره</td>
-                      <td>+201155575986</td>
-                      <td>1</td>
-                      <td></td>
+                      <td>5</td>
+                      <td>
+                        <a href="profile-course.html">
+                          Learn Figma - UI/UX Design Essential Training
+                        </a>
+                      </td>
+                      <td>UI/UX Design</td>
+                      <td>2 س 56 د</td>
+                      <td>12 درس</td>
                       <td>2023-04-27 14:58:14</td>
                     </tr>
                     <tr>
-                      <td>1</td>
-                      <td><a href="profile-student.html">محمد حسن</a></td>
-                      <td>يونس نت نيره</td>
-                      <td>+201155575986</td>
-                      <td>1</td>
-                      <td></td>
+                      <td>6</td>
+                      <td>
+                        <a href="profile-course.html">
+                          Learn Figma - UI/UX Design Essential Training
+                        </a>
+                      </td>
+                      <td>UI/UX Design</td>
+                      <td>2 س 56 د</td>
+                      <td>12 درس</td>
                       <td>2023-04-27 14:58:14</td>
                     </tr>
                     <tr>
-                      <td>1</td>
-                      <td><a href="profile-student.html">محمد حسن</a></td>
-                      <td>يونس نت نيره</td>
-                      <td>+201155575986</td>
-                      <td>1</td>
-                      <td></td>
+                      <td>7</td>
+                      <td>
+                        <a href="profile-course.html">
+                          Learn Figma - UI/UX Design Essential Training
+                        </a>
+                      </td>
+                      <td>UI/UX Design</td>
+                      <td>2 س 56 د</td>
+                      <td>12 درس</td>
                       <td>2023-04-27 14:58:14</td>
                     </tr>
                     <tr>
-                      <td>1</td>
-                      <td><a href="profile-student.html">محمد حسن</a></td>
-                      <td>يونس نت نيره</td>
-                      <td>+201155575986</td>
-                      <td>1</td>
-                      <td></td>
+                      <td>8</td>
+                      <td>
+                        <a href="profile-course.html">
+                          Learn Figma - UI/UX Design Essential Training
+                        </a>
+                      </td>
+                      <td>UI/UX Design</td>
+                      <td>2 س 56 د</td>
+                      <td>12 درس</td>
                       <td>2023-04-27 14:58:14</td>
                     </tr>
                     <tr>
-                      <td>1</td>
-                      <td><a href="profile-student.html">محمد حسن</a></td>
-                      <td>يونس نت نيره</td>
-                      <td>+201155575986</td>
-                      <td>1</td>
-                      <td></td>
-                      <td>2023-04-27 14:58:14</td>
-                    </tr>
-                    <tr>
-                      <td>1</td>
-                      <td><a href="profile-student.html">محمد حسن</a></td>
-                      <td>يونس نت نيره</td>
-                      <td>+201155575986</td>
-                      <td>1</td>
-                      <td></td>
-                      <td>2023-04-27 14:58:14</td>
-                    </tr>
-                    <tr>
-                      <td>1</td>
-                      <td><a href="profile-student.html">محمد حسن</a></td>
-                      <td>يونس نت نيره</td>
-                      <td>+201155575986</td>
-                      <td>1</td>
-                      <td></td>
-                      <td>2023-04-27 14:58:14</td>
-                    </tr>
-                    <tr>
-                      <td>1</td>
-                      <td><a href="profile-student.html">محمد حسن</a></td>
-                      <td>يونس نت نيره</td>
-                      <td>+201155575986</td>
-                      <td>1</td>
-                      <td></td>
+                      <td>9</td>
+                      <td>
+                        <a href="profile-course.html">
+                          Learn Figma - UI/UX Design Essential Training
+                        </a>
+                      </td>
+                      <td>UI/UX Design</td>
+                      <td>2 س 56 د</td>
+                      <td>12 درس</td>
                       <td>2023-04-27 14:58:14</td>
                     </tr>
                   </tbody>
@@ -354,62 +351,51 @@
 
     <!-- start popup add client -->
     <div class="overflow"></div>
-    <div class="add_client add_popup">
+    <div class="add_courses add_popup">
       <div class="head">
-        <h3>اضافه عميل</h3>
+        <h3>اضافه كورس</h3>
         <i class="fa-solid fa-xmark close_popup"></i>
       </div>
 
       <form action="">
         <div class="input_item">
-          <label for="">الاسم </label>
-          <input type="text" placeholder="اسمك" />
-        </div>
-        <div class="input_item">
-          <label for="">السن </label>
-          <input type="number" placeholder="سنك" />
-        </div>
-        <div class="input_item">
-          <label for="">العنوان </label>
-          <input type="text" placeholder="عنوانك" />
-        </div>
-        <div class="input_item">
-          <label for="">اسم الكورس </label>
+          <label for=""> اسم الكورس</label>
           <input type="text" placeholder="اسم الكورس" />
         </div>
         <div class="input_item">
-          <label for=""> رقم الموبيل </label>
-          <input type="text" placeholder="رقم الموبيل" />
+          <label for=""> نوع الكورس</label>
+          <input type="text" placeholder="نوع الكورس" />
         </div>
+        <div class="input_item">
+          <label for=""> عدد الدروس</label>
+          <input type="number" placeholder=" عدد الدروس" />
+        </div>
+        <div class="input_item">
+          <label for="">وقت الكورس</label>
+          <input type="number" placeholder="وقت الدروس" />
+        </div>
+        <div class="input_item">
+          <label for=""> السعر</label>
+          <input type="number" placeholder="السعر" />
+        </div>
+        <div class="input_item">
+          <label for=""> المستوي</label>
+          <input type="text" placeholder="المستوي" />
+        </div>
+        <div class="input_item">
+          <label for="">وصف</label>
+          <textarea name="" id="" placeholder="وصف"></textarea>
+        </div>
+        <div class="input_item input_file">
+          <span> صوره الكورس</span>
+          <label for="file_message" class="file_lebel">اختار صوره الكورس</label>
+          <input type="file" id="file_message" />
+        </div>
+
         <button class="btn_add">Add</button>
       </form>
     </div>
     <!-- end popup add client -->
-
-    <!-- start popup filter -->
-    <div class="popup_filter">
-      <div class="head">
-        <h3>فلتر</h3>
-        <i class="fa-solid fa-xmark close_popup_filter"></i>
-      </div>
-
-      <form action="">
-        <div class="input_item">
-          <label for="">اسم الكورس </label>
-          <input type="text" placeholder="اسم الكورس" />
-        </div>
-        <div class="input_item">
-          <label for=""> من</label>
-          <input type="date" placeholder="" />
-        </div>
-        <div class="input_item">
-          <label for=""> الي</label>
-          <input type="date" placeholder="" />
-        </div>
-        <button class="btn_add">filter</button>
-      </form>
-    </div>
-    <!-- end popup filter -->
 
     <script src="js/main.js"></script>
     <script src="js/handle-popup.js"></script>

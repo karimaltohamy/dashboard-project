@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>dashboard project</title>
+    <title>dashboard project | Profile student</title>
     <link rel="stylesheet" href="css/style.css" />
     <!-- boostrap -->
     <link
@@ -25,11 +25,6 @@
       integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
-    />
-    <!-- Boxicons CSS -->
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
     />
   </head>
   <body>
@@ -147,6 +142,13 @@
               </div>
 
               <div class="mini_list">
+                <a href="courses-page.html" class="item">
+                  <i class="bx bxs-grid-alt"></i>
+                  <span>الكورسات</span>
+                </a>
+              </div>
+
+              <div class="mini_list">
                 <div
                   href="messages-list.html"
                   class="item item_list"
@@ -176,7 +178,7 @@
                 </a>
               </div>
               <div class="mini_list">
-                <a href="links-shortcut.html" class="item active">
+                <a href="links-shortcut.html" class="item">
                   <i class="fa-solid fa-link"></i>
                   <span>اختصار الروابط</span>
                 </a>
@@ -186,43 +188,79 @@
         </div>
         <div class="right">
           <div class="head_section">
-            <h4>اختصار الروابط</h4>
+            <h4>بروفايل الكورس</h4>
           </div>
 
-          <div class="links_shortcut">
-            <div class="btns">
-              <button class="btn_write">كتابه الروابط</button>
-              <button class="btn_upload_file">رفع ملف</button>
+          <div class="content_profile_student">
+            <div class="head_profile_student">
+              <div class="background_head"></div>
+              <div class="main_details">
+                <img src="images/course-img-01.jpg" alt="" />
+                <div class="text">
+                  <h4>Learn Figma - UI/UX Design Essential Training</h4>
+                  <span>UX / UI Designer</span>
+                </div>
+              </div>
             </div>
 
-            <form action="" class="form_upload_file">
-              <div class="input_item">
-                <span>الملف</span>
-                <label for="file_links">قم بتحديد ملف الexcel</label>
-                <input
-                  type="file"
-                  class="d-none"
-                  id="file_links"
-                  placeholder=""
-                />
+            <div class="info_details_profile">
+              <div class="head_info">
+                <h4>عَنِّي</h4>
               </div>
-              <div class="input_item">
-                <label for="">الاعمده</label>
-                <input
-                  type="text"
-                  placeholder="الاعمده(مفصول بينهم ب , مثال url, link)"
-                />
-              </div>
-              <button class="btn_shortcut">اختصار الروابط</button>
-            </form>
 
-            <form action="" class="form_write_links">
-              <div class="input_item">
-                <label for="">الاعمده</label>
-                <textarea name="" id=""></textarea>
+              <div class="profile_flex">
+                <div class="bio handle_width">
+                  <h5>السيرة الذاتية</h5>
+                  <p>
+                    تم تصميم هذه الدورة من قبل اثنين من علماء البيانات المحترفين
+                    حتى نتمكن من مشاركة معرفتنا ومساعدتك على تعلم النظرية
+                    المعقدة والخوارزميات ومكتبات الترميز بطريقة بسيطة. سنرشدك
+                    خطوة بخطوة إلى عالم التعلم الآلي. مع كل برنامج تعليمي ،
+                    ستقوم بتطوير مهارات جديدة وتحسين فهمك لهذا المجال الفرعي
+                    المربح والتحدي لعلوم البيانات.
+                  </p>
+                </div>
+                <div class="Personal_information handle_width">
+                  <h5>معلومات الكورس</h5>
+                  <div class="item">
+                    <h6 class="title">اسم الكورس :</h6>
+                    <span>Learn Figma - UI/UX Design Essential Training</span>
+                  </div>
+                  <div class="item">
+                    <h6 class="title">نوع الكورس :</h6>
+                    <span>UI/UX Design</span>
+                  </div>
+                  <div class="item">
+                    <h6 class="title">وقت الكورس :</h6>
+                    <span>2 س 56 د</span>
+                  </div>
+                  <div class="item">
+                    <h6 class="title">عدد الدروس :</h6>
+                    <span>12 درس</span>
+                  </div>
+                  <div class="item">
+                    <h6 class="title">عدد المشتركين:</h6>
+                    <span>254</span>
+                  </div>
+                  <div class="item">
+                    <h6 class="title">المستوي:</h6>
+                    <span>المبتدئ</span>
+                  </div>
+                  <div class="item">
+                    <h6 class="title">لينك فيديو :</h6>
+                    <span>https://www.youtube.com/</span>
+                  </div>
+                  <div class="item">
+                    <h6 class="title">السعر:</h6>
+                    <span>$147.00</span>
+                  </div>
+                  <div class="item">
+                    <h6 class="title">الشهاده :</h6>
+                    <span>نعم</span>
+                  </div>
+                </div>
               </div>
-              <button class="btn_shortcut">اختصار الروابط</button>
-            </form>
+            </div>
           </div>
         </div>
       </div>
@@ -230,27 +268,5 @@
     <!-- end main -->
 
     <script src="js/main.js"></script>
-    <script>
-      const formWriteLinks = document.querySelector(".form_write_links");
-      const formUploadFile = document.querySelector(".form_upload_file");
-      const btnWrite = document.querySelector(".links_shortcut .btn_write");
-      const btnUploadFile = document.querySelector(
-        ".links_shortcut .btn_upload_file"
-      );
-
-      btnWrite.addEventListener("click", () => {
-        formWriteLinks.classList.add("active");
-        formUploadFile.classList.add("remove");
-        btnUploadFile.classList.add("active");
-        btnWrite.classList.add("remove");
-      });
-
-      btnUploadFile.addEventListener("click", () => {
-        formWriteLinks.classList.remove("active");
-        formUploadFile.classList.remove("remove");
-        btnUploadFile.classList.remove("active");
-        btnWrite.classList.remove("remove");
-      });
-    </script>
   </body>
 </html>

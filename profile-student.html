@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>dashboard project</title>
+    <title>dashboard project | Profile student</title>
     <link rel="stylesheet" href="css/style.css" />
     <!-- boostrap -->
     <link
@@ -25,11 +25,6 @@
       integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
-    />
-    <!-- Boxicons CSS -->
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
     />
   </head>
   <body>
@@ -114,7 +109,11 @@
               </div>
 
               <div class="mini_list">
-                <div href="clients.html" class="item item_list" data-num="1">
+                <div
+                  href="clients.html"
+                  class="item item_list active"
+                  data-num="1"
+                >
                   <i class="fa-solid fa-angle-down arrow"></i>
                   <i class="fa-solid fa-user-group"></i>
                   <span>العملاء</span>
@@ -176,7 +175,7 @@
                 </a>
               </div>
               <div class="mini_list">
-                <a href="links-shortcut.html" class="item active">
+                <a href="links-shortcut.html" class="item">
                   <i class="fa-solid fa-link"></i>
                   <span>اختصار الروابط</span>
                 </a>
@@ -186,43 +185,122 @@
         </div>
         <div class="right">
           <div class="head_section">
-            <h4>اختصار الروابط</h4>
+            <h4>بروفايل الطالب</h4>
           </div>
 
-          <div class="links_shortcut">
-            <div class="btns">
-              <button class="btn_write">كتابه الروابط</button>
-              <button class="btn_upload_file">رفع ملف</button>
+          <div class="content_profile_student">
+            <div class="head_profile_student">
+              <div class="background_head"></div>
+              <div class="main_details">
+                <img src="images/img-profile.jpg" alt="" />
+                <div class="text">
+                  <h4>محمود احمد</h4>
+                  <span>UX / UI Designer</span>
+                </div>
+                <div class="text">
+                  <h4>info@example.com</h4>
+                  <span>الايميل</span>
+                </div>
+              </div>
             </div>
 
-            <form action="" class="form_upload_file">
-              <div class="input_item">
-                <span>الملف</span>
-                <label for="file_links">قم بتحديد ملف الexcel</label>
-                <input
-                  type="file"
-                  class="d-none"
-                  id="file_links"
-                  placeholder=""
-                />
+            <div class="line">
+              <div class="left">
+                <div class="info_details_profile">
+                  <div class="head_info">
+                    <h4>عَنِّي</h4>
+                  </div>
+                  <div class="bio">
+                    <h5>السيرة الذاتية</h5>
+                    <p>
+                      استحوذ الصفاء الرائع على روحي بأكملها ، مثل صباح الربيع
+                      الحلو الذي أستمتع به من كل قلبي. أنا وحدي ، وأشعر أن سحر
+                      الوجود قد خلق لنعمة النفوس مثل لي ، أنا سعيد جدًا يا صديقي
+                      العزيز ، منغمسًا في الشعور الرائع بالوجود الهادئ ، لدرجة
+                      أنني أهمل مواهبي. انتشرت مجموعة من عينات النسيج على
+                      الطاولة - كان سامسا بائعًا متجولًا - وفوقها علق صورة كان
+                      قد قطعها مؤخرًا من مجلة مصورة ووضعها في إطار جميل مذهّب
+                    </p>
+                  </div>
+                  <div class="Personal_information">
+                    <h5>معلومات شخصية</h5>
+                    <div class="item">
+                      <h6 class="title">الاسم :</h6>
+                      <span>محمود احمد</span>
+                    </div>
+                    <div class="item">
+                      <h6 class="title">الايميل :</h6>
+                      <span>info@example.com</span>
+                    </div>
+                    <div class="item">
+                      <h6 class="title">السن :</h6>
+                      <span>26</span>
+                    </div>
+                    <div class="item">
+                      <h6 class="title">العنوان :</h6>
+                      <span>مصر,البحيره</span>
+                    </div>
+                    <div class="item">
+                      <h6 class="title">الكورسات:</h6>
+                      <span>(تصميم واجهات المستخدم , كورس html)</span>
+                    </div>
+                    <div class="item">
+                      <h6 class="title">نوع الدفع :</h6>
+                      <span>الدفع</span>
+                    </div>
+                    <div class="item">
+                      <h6 class="title">مواعيد حجز الكورس :</h6>
+                      <span>12/3/2022</span>
+                    </div>
+                    <div class="item">
+                      <h6 class="title">الشهاده :</h6>
+                      <span>عند انتهاء الكورس</span>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="input_item">
-                <label for="">الاعمده</label>
-                <input
-                  type="text"
-                  placeholder="الاعمده(مفصول بينهم ب , مثال url, link)"
-                />
-              </div>
-              <button class="btn_shortcut">اختصار الروابط</button>
-            </form>
+              <div class="right">
+                <div class="follow_up_links">
+                  <div class="head_links">
+                    <h4>لينكات لمتابعه</h4>
+                  </div>
 
-            <form action="" class="form_write_links">
-              <div class="input_item">
-                <label for="">الاعمده</label>
-                <textarea name="" id=""></textarea>
+                  <div class="table_links">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>اسم اللينك</th>
+                          <th>اللينك</th>
+                          <th>التاريخ</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>واتساب</td>
+                          <td>https://web.whatsapp.com/</td>
+                          <td>2023-04-27 14:58:14</td>
+                        </tr>
+                        <tr>
+                          <td>sms</td>
+                          <td>https://web.whatsapp.com/</td>
+                          <td>2023-04-27 14:58:14</td>
+                        </tr>
+                        <tr>
+                          <td>واتساب</td>
+                          <td>https://web.whatsapp.com/</td>
+                          <td>2023-04-27 14:58:14</td>
+                        </tr>
+                        <tr>
+                          <td>sms</td>
+                          <td>https://web.whatsapp.com/</td>
+                          <td>2023-04-27 14:58:14</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
               </div>
-              <button class="btn_shortcut">اختصار الروابط</button>
-            </form>
+            </div>
           </div>
         </div>
       </div>
@@ -230,27 +308,5 @@
     <!-- end main -->
 
     <script src="js/main.js"></script>
-    <script>
-      const formWriteLinks = document.querySelector(".form_write_links");
-      const formUploadFile = document.querySelector(".form_upload_file");
-      const btnWrite = document.querySelector(".links_shortcut .btn_write");
-      const btnUploadFile = document.querySelector(
-        ".links_shortcut .btn_upload_file"
-      );
-
-      btnWrite.addEventListener("click", () => {
-        formWriteLinks.classList.add("active");
-        formUploadFile.classList.add("remove");
-        btnUploadFile.classList.add("active");
-        btnWrite.classList.add("remove");
-      });
-
-      btnUploadFile.addEventListener("click", () => {
-        formWriteLinks.classList.remove("active");
-        formUploadFile.classList.remove("remove");
-        btnUploadFile.classList.remove("active");
-        btnWrite.classList.remove("remove");
-      });
-    </script>
   </body>
 </html>

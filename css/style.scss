@@ -1,6 +1,7 @@
 @use "../pages-style/reset";
 @use "../components-style/navbar";
 @use "../components-style/sidebar";
+@use "../components-style/handle-popup";
 @use "../pages-style/index";
 @use "../pages-style/handle-table";
 @use "../pages-style/add-page";
@@ -8,3 +9,4 @@
 @use "../pages-style/profile-page";
 @use "../pages-style/templates-messages";
 @use "../pages-style/links-shortcut";
+@use "../pages-style/profile-student";

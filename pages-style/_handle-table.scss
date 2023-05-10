@@ -81,6 +81,28 @@ $dark-text: #324664;
         border: none;
       }
 
+      .info_head_table {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        .btn_filter {
+          background-color: $primary-color;
+          color: white;
+          font-weight: 600;
+          padding: 6px 20px;
+          border-radius: 4px;
+          border: none;
+          display: flex;
+          align-items: center;
+          gap: 5px;
+
+          i {
+            font-size: 16px;
+          }
+        }
+      }
+
       .search_input {
         border: 1px solid #c9cfd6;
         display: flex;

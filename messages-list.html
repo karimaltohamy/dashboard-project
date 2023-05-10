@@ -138,6 +138,14 @@
                   <span>المجموعات</span>
                 </a>
               </div>
+
+              <div class="mini_list">
+                <a href="courses-page.html" class="item">
+                  <i class="fa-solid fa-graduation-cap"></i>
+                  <span>الكورسات</span>
+                </a>
+              </div>
+
               <div class="mini_list">
                 <div
                   href="messages-list.html"
@@ -194,7 +202,7 @@
               <div class="head_tabel">
                 <button class="btn_add">
                   <i class="fa-solid fa-plus"></i>
-                  اضافه عميل
+                  اضافه رساله
                 </button>
 
                 <div class="search_input">
@@ -213,6 +221,7 @@
                       <th>الرساله</th>
                       <th>من</th>
                       <th>الي</th>
+                      <th>نوع الرساله</th>
                       <th>تاريخ الانشاء</th>
                     </tr>
                   </thead>
@@ -222,6 +231,7 @@
                       <td>عزيزنا العميل السيد -ة احمد حبينا نفكرك...</td>
                       <td>+201064017204</td>
                       <td>+201155575986</td>
+                      <td>واتساب</td>
                       <td>2023-04-27 14:58:14</td>
                     </tr>
                     <tr>
@@ -229,6 +239,7 @@
                       <td>عزيزنا العميل السيد -ة احمد حبينا نفكرك...</td>
                       <td>+201064017204</td>
                       <td>+201155575986</td>
+                      <td>واتساب</td>
                       <td>2023-04-27 14:58:14</td>
                     </tr>
                     <tr>
@@ -236,6 +247,7 @@
                       <td>عزيزنا العميل السيد -ة احمد حبينا نفكرك...</td>
                       <td>+201064017204</td>
                       <td>+201155575986</td>
+                      <td>واتساب</td>
                       <td>2023-04-27 14:58:14</td>
                     </tr>
                     <tr>
@@ -243,6 +255,7 @@
                       <td>عزيزنا العميل السيد -ة احمد حبينا نفكرك...</td>
                       <td>+201064017204</td>
                       <td>+201155575986</td>
+                      <td>واتساب</td>
                       <td>2023-04-27 14:58:14</td>
                     </tr>
                     <tr>
@@ -250,6 +263,7 @@
                       <td>عزيزنا العميل السيد -ة احمد حبينا نفكرك...</td>
                       <td>+201064017204</td>
                       <td>+201155575986</td>
+                      <td>واتساب</td>
                       <td>2023-04-27 14:58:14</td>
                     </tr>
                     <tr>
@@ -257,6 +271,7 @@
                       <td>عزيزنا العميل السيد -ة احمد حبينا نفكرك...</td>
                       <td>+201064017204</td>
                       <td>+201155575986</td>
+                      <td>واتساب</td>
                       <td>2023-04-27 14:58:14</td>
                     </tr>
                     <tr>
@@ -264,6 +279,7 @@
                       <td>عزيزنا العميل السيد -ة احمد حبينا نفكرك...</td>
                       <td>+201064017204</td>
                       <td>+201155575986</td>
+                      <td>واتساب</td>
                       <td>2023-04-27 14:58:14</td>
                     </tr>
                     <tr>
@@ -271,6 +287,7 @@
                       <td>عزيزنا العميل السيد -ة احمد حبينا نفكرك...</td>
                       <td>+201064017204</td>
                       <td>+201155575986</td>
+                      <td>واتساب</td>
                       <td>2023-04-27 14:58:14</td>
                     </tr>
                     <tr>
@@ -278,6 +295,7 @@
                       <td>عزيزنا العميل السيد -ة احمد حبينا نفكرك...</td>
                       <td>+201064017204</td>
                       <td>+201155575986</td>
+                      <td>واتساب</td>
                       <td>2023-04-27 14:58:14</td>
                     </tr>
                     <tr>
@@ -285,6 +303,7 @@
                       <td>عزيزنا العميل السيد -ة احمد حبينا نفكرك...</td>
                       <td>+201064017204</td>
                       <td>+201155575986</td>
+                      <td>واتساب</td>
                       <td>2023-04-27 14:58:14</td>
                     </tr>
                     <tr>
@@ -292,6 +311,7 @@
                       <td>عزيزنا العميل السيد -ة احمد حبينا نفكرك...</td>
                       <td>+201064017204</td>
                       <td>+201155575986</td>
+                      <td>واتساب</td>
                       <td>2023-04-27 14:58:14</td>
                     </tr>
                   </tbody>
@@ -314,6 +334,40 @@
     </main>
     <!-- end main -->
 
+    <!-- start popup add client -->
+    <div class="overflow"></div>
+    <div class="add_message add_popup">
+      <div class="head">
+        <h3>اضافه رساله</h3>
+        <i class="fa-solid fa-xmark close_popup"></i>
+      </div>
+
+      <form action="">
+        <div class="input_item input_file">
+          <span>ادخل الشيت</span>
+          <label for="file_message" class="file_lebel"
+            >قم بتحديد ملف الexcel</label
+          >
+          <input type="file" id="file_message" />
+        </div>
+        <div class="input_item">
+          <label for="">اختار القالب</label>
+          <select name="" id="">
+            <option value="">واتساب</option>
+            <option value="">SMS</option>
+          </select>
+        </div>
+        <div class="input_item">
+          <label for=""> الرساله</label>
+          <input type="text" placeholder="الرساله" />
+        </div>
+
+        <button class="btn_add">Add</button>
+      </form>
+    </div>
+    <!-- end popup add client -->
+
     <script src="js/main.js"></script>
+    <script src="js/handle-popup.js"></script>
   </body>
 </html>
