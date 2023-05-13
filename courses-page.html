@@ -353,35 +353,52 @@
     <div class="overflow"></div>
     <div class="add_courses add_popup">
       <div class="head">
-        <h3>اضافه كورس</h3>
+        <h3>
+          <span><i class="fa-solid fa-school"></i></span> اضافه كورس
+        </h3>
         <i class="fa-solid fa-xmark close_popup"></i>
       </div>
 
       <form action="">
-        <div class="input_item">
-          <label for=""> اسم الكورس</label>
-          <input type="text" placeholder="اسم الكورس" />
+        <div class="row">
+          <div class="col-6">
+            <div class="input_item">
+              <label for=""> اسم الكورس</label>
+              <input type="text" placeholder="اسم الكورس" />
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="input_item">
+              <label for=""> نوع الكورس</label>
+              <input type="text" placeholder="نوع الكورس" />
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="input_item">
+              <label for=""> عدد الدروس</label>
+              <input type="number" placeholder=" عدد الدروس" />
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="input_item">
+              <label for="">وقت الكورس</label>
+              <input type="number" placeholder="وقت الدروس" />
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="input_item">
+              <label for=""> السعر</label>
+              <input type="number" placeholder="السعر" />
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="input_item">
+              <label for=""> المستوي</label>
+              <input type="text" placeholder="المستوي" />
+            </div>
+          </div>
         </div>
-        <div class="input_item">
-          <label for=""> نوع الكورس</label>
-          <input type="text" placeholder="نوع الكورس" />
-        </div>
-        <div class="input_item">
-          <label for=""> عدد الدروس</label>
-          <input type="number" placeholder=" عدد الدروس" />
-        </div>
-        <div class="input_item">
-          <label for="">وقت الكورس</label>
-          <input type="number" placeholder="وقت الدروس" />
-        </div>
-        <div class="input_item">
-          <label for=""> السعر</label>
-          <input type="number" placeholder="السعر" />
-        </div>
-        <div class="input_item">
-          <label for=""> المستوي</label>
-          <input type="text" placeholder="المستوي" />
-        </div>
+
         <div class="input_item">
           <label for="">وصف</label>
           <textarea name="" id="" placeholder="وصف"></textarea>
@@ -392,7 +409,7 @@
           <input type="file" id="file_message" />
         </div>
 
-        <button class="btn_add">Add</button>
+        <button class="btn_add">Add <i class="fa-solid fa-plus"></i></button>
       </form>
     </div>
     <!-- end popup add client -->

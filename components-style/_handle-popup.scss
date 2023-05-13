@@ -47,6 +47,26 @@ $dark-text: #324664;
     h3 {
       margin-bottom: 0;
       font-size: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: $dark-text;
+
+      span {
+        width: 35px;
+        height: 35px;
+
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #e2842d4e;
+
+        i {
+          color: #e2852d;
+          font-size: 17px;
+        }
+      }
     }
 
     i {
@@ -67,14 +87,15 @@ $dark-text: #324664;
       label {
         font-size: 15px;
         font-weight: 500;
+        color: $dark-text;
       }
 
       input,
       select,
       textarea {
-        border: 1px solid rgb(175, 175, 175);
+        border: 1px solid rgb(195 195 195);
         padding: 5px;
-        border-radius: 6px;
+        border-radius: 4px;
         font-size: 14px;
       }
 
@@ -112,6 +133,68 @@ $dark-text: #324664;
       border-radius: 7px;
       border: none;
       width: 100%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .add_client,
+  .popup_filter,
+  .add_message,
+  .add_courses {
+    .head {
+      padding: 6px 10px;
+
+      h3 {
+        font-size: 17px;
+        gap: 6px;
+
+        span {
+          width: 30px;
+          height: 30px;
+
+          i {
+            font-size: 15px;
+          }
+        }
+      }
+
+      i {
+        font-size: 18px;
+      }
+    }
+
+    form {
+      padding: 10px 13px;
+
+      .row {
+        .col-6 {
+          padding-left: 8px;
+          padding-right: 8px;
+        }
+      }
+
+      .input_item {
+        label {
+          font-size: 13px;
+        }
+
+        input,
+        textarea {
+          padding: 3px 5px;
+          font-size: 13px;
+        }
+
+        textarea {
+          height: 60px;
+        }
+      }
+
+      .btn_add {
+        padding: 5px;
+        font-size: 14px;
+        border-radius: 4px;
+      }
     }
   }
 }
