@@ -101,6 +101,24 @@ $dark-text: #324664;
             font-size: 16px;
           }
         }
+
+        .btn_collage {
+          background-color: $dark-text;
+          color: white;
+          font-weight: 600;
+          padding: 6px 20px;
+          border-radius: 4px;
+          border: none;
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          font-size: 15px;
+          min-width: 140px;
+
+          i {
+            font-size: 15px;
+          }
+        }
       }
 
       .search_input {

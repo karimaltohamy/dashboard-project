@@ -135,24 +135,32 @@
               </div>
 
               <div class="mini_list">
-                <a href="courses-page.html" class="item active">
+                <div class="item item_list active" data-num="2">
+                  <i class="fa-solid fa-angle-down arrow"></i>
                   <i class="fa-solid fa-graduation-cap"></i>
                   <span>الكورسات</span>
-                </a>
+                </div>
+
+                <ul class="list list2">
+                  <li>
+                    <span></span>
+                    <a href="courses-page.html">الكورسات</a>
+                  </li>
+                  <li>
+                    <span></span>
+                    <a href="create-course.html">انشاء كورس</a>
+                  </li>
+                </ul>
               </div>
 
               <div class="mini_list">
-                <div
-                  href="messages-list.html"
-                  class="item item_list"
-                  data-num="2"
-                >
+                <div class="item item_list" data-num="3">
                   <i class="fa-solid fa-angle-down arrow"></i>
                   <i class="fa-solid fa-message"></i>
                   <span>الرسائل</span>
                 </div>
 
-                <ul class="list list2">
+                <ul class="list list3">
                   <li>
                     <span></span>
                     <a href="messages-list.html">قائمه الرسائل</a>
@@ -182,29 +190,24 @@
         <div class="right">
           <div class="table_container">
             <div class="content">
-              <div class="toolbar_table">
-                <p>عدد البيانات التى تم العثور عليها : <span>1447</span></p>
-                <div class="btns">
-                  <div class="btn_filter">
-                    <i class="fa-solid fa-filter"></i>
-                  </div>
-                  <div class="btn_relaod">
-                    <i class="fa-solid fa-rotate"></i>
-                  </div>
-                </div>
-              </div>
-
               <div class="head_tabel">
                 <button class="btn_add">
                   <i class="fa-solid fa-plus"></i>
                   اضافه كورس
                 </button>
 
-                <div class="search_input">
-                  <input type="text" placeholder="ابحث" />
-                  <span>
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                  </span>
+                <div class="info_head_table">
+                  <div class="search_input">
+                    <input type="text" placeholder="ابحث" />
+                    <span>
+                      <i class="fa-solid fa-magnifying-glass"></i>
+                    </span>
+                  </div>
+
+                  <button class="btn_collage">
+                    <i class="fa-solid fa-building-columns"></i>
+                    اضافه جامعه
+                  </button>
                 </div>
               </div>
 
@@ -414,7 +417,48 @@
     </div>
     <!-- end popup add client -->
 
+    <!-- start popup add collage -->
+    <div class="popup_collage">
+      <div class="head">
+        <h3>
+          <span><i class="fa-solid fa-school"></i></span>
+          اضافه جامعه
+        </h3>
+        <i class="fa-solid fa-xmark close_popup_collage"></i>
+      </div>
+
+      <form action="">
+        <div class="input_item">
+          <label for="">اسم الجامعه </label>
+          <input type="text" placeholder="اسم الجامعه" />
+        </div>
+        <div class="input_checkbox">
+          <label for="">filter</label>
+          <input type="checkbox" placeholder="" />
+        </div>
+
+        <button class="btn_add"><i class="fa-solid fa-plus"></i> Add</button>
+      </form>
+    </div>
+    <!-- end popup add collage -->
+
     <script src="js/main.js"></script>
     <script src="js/handle-popup.js"></script>
+    <script>
+      // popup add collage in courses page
+      const popupCollage = document.querySelector(".popup_collage");
+      const btnCollage = document.querySelector(".btn_collage");
+      const btnCloseCollage = document.querySelector(".close_popup_collage");
+
+      btnCollage.addEventListener("click", () => {
+        popupCollage.classList.add("active");
+        overflow.classList.add("active");
+      });
+
+      btnCloseCollage.addEventListener("click", () => {
+        popupCollage.classList.remove("active");
+        overflow.classList.remove("active");
+      });
+    </script>
   </body>
 </html>

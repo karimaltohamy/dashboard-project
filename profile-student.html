@@ -139,24 +139,32 @@
               </div>
 
               <div class="mini_list">
-                <a href="courses-page.html" class="item">
+                <div class="item item_list" data-num="2">
+                  <i class="fa-solid fa-angle-down arrow"></i>
                   <i class="fa-solid fa-graduation-cap"></i>
                   <span>الكورسات</span>
-                </a>
+                </div>
+
+                <ul class="list list2">
+                  <li>
+                    <span></span>
+                    <a href="courses-page.html">الكورسات</a>
+                  </li>
+                  <li>
+                    <span></span>
+                    <a href="create-course.html">انشاء كورس</a>
+                  </li>
+                </ul>
               </div>
 
               <div class="mini_list">
-                <div
-                  href="messages-list.html"
-                  class="item item_list"
-                  data-num="2"
-                >
+                <div class="item item_list" data-num="3">
                   <i class="fa-solid fa-angle-down arrow"></i>
                   <i class="fa-solid fa-message"></i>
                   <span>الرسائل</span>
                 </div>
 
-                <ul class="list list2">
+                <ul class="list list3">
                   <li>
                     <span></span>
                     <a href="messages-list.html">قائمه الرسائل</a>
@@ -195,7 +203,7 @@
                 <img src="images/img-profile.jpg" alt="" />
                 <div class="text">
                   <h4>محمود احمد</h4>
-                  <span>UX / UI Designer</span>
+                  <span>Student</span>
                 </div>
                 <div class="text">
                   <h4>info@example.com</h4>
@@ -208,20 +216,9 @@
               <div class="left">
                 <div class="info_details_profile">
                   <div class="head_info">
-                    <h4>عَنِّي</h4>
+                    <h4>عني</h4>
                   </div>
-                  <div class="bio">
-                    <h5>السيرة الذاتية</h5>
-                    <p>
-                      استحوذ الصفاء الرائع على روحي بأكملها ، مثل صباح الربيع
-                      الحلو الذي أستمتع به من كل قلبي. أنا وحدي ، وأشعر أن سحر
-                      الوجود قد خلق لنعمة النفوس مثل لي ، أنا سعيد جدًا يا صديقي
-                      العزيز ، منغمسًا في الشعور الرائع بالوجود الهادئ ، لدرجة
-                      أنني أهمل مواهبي. انتشرت مجموعة من عينات النسيج على
-                      الطاولة - كان سامسا بائعًا متجولًا - وفوقها علق صورة كان
-                      قد قطعها مؤخرًا من مجلة مصورة ووضعها في إطار جميل مذهّب
-                    </p>
-                  </div>
+
                   <div class="Personal_information">
                     <h5>معلومات شخصية</h5>
                     <div class="item">
@@ -237,16 +234,21 @@
                       <span>26</span>
                     </div>
                     <div class="item">
+                      <h6 class="title">رقم الموبيل:</h6>
+                      <span>01085987978</span>
+                    </div>
+                    <div class="item">
                       <h6 class="title">العنوان :</h6>
                       <span>مصر,البحيره</span>
                     </div>
+
                     <div class="item">
-                      <h6 class="title">الكورسات:</h6>
-                      <span>(تصميم واجهات المستخدم , كورس html)</span>
+                      <h6 class="title">الجامعه:</h6>
+                      <span>جامعه القاهره</span>
                     </div>
                     <div class="item">
-                      <h6 class="title">نوع الدفع :</h6>
-                      <span>الدفع</span>
+                      <h6 class="title">الفرقه الدراسيه:</h6>
+                      <span>الثانيه</span>
                     </div>
                     <div class="item">
                       <h6 class="title">مواعيد حجز الكورس :</h6>
@@ -299,6 +301,61 @@
                     </table>
                   </div>
                 </div>
+              </div>
+            </div>
+            <div class="courses_student">
+              <div class="head_courses">
+                <h4>عن الكورسات</h4>
+              </div>
+              <div class="table_courses">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>اسم الكورس</th>
+                      <th>المعاد</th>
+                      <th>طريقه الحضور</th>
+                      <th>المبلغ المدفوع</th>
+                      <th>المبلغ المتبقي</th>
+                      <th>الحاله</th>
+                      <th>تاريخ الدفع الاول</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Vaccines Industry</td>
+                      <td>2023-04-27</td>
+                      <td>online</td>
+                      <td>100</td>
+                      <td>250</td>
+                      <td>
+                        <span class="contact active">متصل</span>
+                      </td>
+                      <td>2023-04-27 14:58:14</td>
+                    </tr>
+                    <tr>
+                      <td>Food Production training</td>
+                      <td>2023-04-27</td>
+                      <td>online</td>
+                      <td>100</td>
+                      <td>250</td>
+                      <td>
+                        <span class="contact active">متصل</span>
+                      </td>
+                      <td>2023-04-27 14:58:14</td>
+                    </tr>
+                    <tr>
+                      <td>Cytogenetics Training</td>
+                      <td>2023-04-27</td>
+                      <td>online</td>
+                      <td>100</td>
+                      <td>250</td>
+                      <td>
+                        <span class="contact offline">غير متصل </span>
+                      </td>
+                      <td>2023-04-27 14:58:14</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>

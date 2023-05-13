@@ -354,7 +354,7 @@ main > .content > .right.scale {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.614);
+  background-color: rgba(0, 0, 0, 0.33);
   z-index: 5;
   display: none;
 }
@@ -365,7 +365,8 @@ main > .content > .right.scale {
 .add_client,
 .popup_filter,
 .add_message,
-.add_courses {
+.add_courses,
+.popup_collage {
   position: fixed;
   max-width: 550px;
   width: 90%;
@@ -381,13 +382,15 @@ main > .content > .right.scale {
 .add_client.active,
 .popup_filter.active,
 .add_message.active,
-.add_courses.active {
+.add_courses.active,
+.popup_collage.active {
   display: block;
 }
 .add_client .head,
 .popup_filter .head,
 .add_message .head,
-.add_courses .head {
+.add_courses .head,
+.popup_collage .head {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -403,7 +406,8 @@ main > .content > .right.scale {
 .add_client .head h3,
 .popup_filter .head h3,
 .add_message .head h3,
-.add_courses .head h3 {
+.add_courses .head h3,
+.popup_collage .head h3 {
   margin-bottom: 0;
   font-size: 20px;
   display: -webkit-box;
@@ -418,7 +422,8 @@ main > .content > .right.scale {
 .add_client .head h3 span,
 .popup_filter .head h3 span,
 .add_message .head h3 span,
-.add_courses .head h3 span {
+.add_courses .head h3 span,
+.popup_collage .head h3 span {
   width: 35px;
   height: 35px;
   border-radius: 50%;
@@ -436,27 +441,31 @@ main > .content > .right.scale {
 .add_client .head h3 span i,
 .popup_filter .head h3 span i,
 .add_message .head h3 span i,
-.add_courses .head h3 span i {
+.add_courses .head h3 span i,
+.popup_collage .head h3 span i {
   color: #e2852d;
   font-size: 17px;
 }
 .add_client .head i,
 .popup_filter .head i,
 .add_message .head i,
-.add_courses .head i {
+.add_courses .head i,
+.popup_collage .head i {
   font-size: 20px;
   cursor: pointer;
 }
 .add_client form,
 .popup_filter form,
 .add_message form,
-.add_courses form {
+.add_courses form,
+.popup_collage form {
   padding: 10px 15px;
 }
 .add_client form .input_item,
 .popup_filter form .input_item,
 .add_message form .input_item,
-.add_courses form .input_item {
+.add_courses form .input_item,
+.popup_collage form .input_item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -470,7 +479,8 @@ main > .content > .right.scale {
 .add_client form .input_item label,
 .popup_filter form .input_item label,
 .add_message form .input_item label,
-.add_courses form .input_item label {
+.add_courses form .input_item label,
+.popup_collage form .input_item label {
   font-size: 15px;
   font-weight: 500;
   color: #324664;
@@ -486,7 +496,10 @@ main > .content > .right.scale {
 .add_message form .input_item textarea,
 .add_courses form .input_item input,
 .add_courses form .input_item select,
-.add_courses form .input_item textarea {
+.add_courses form .input_item textarea,
+.popup_collage form .input_item input,
+.popup_collage form .input_item select,
+.popup_collage form .input_item textarea {
   border: 1px solid rgb(195, 195, 195);
   padding: 5px;
   border-radius: 4px;
@@ -495,20 +508,23 @@ main > .content > .right.scale {
 .add_client form .input_item textarea,
 .popup_filter form .input_item textarea,
 .add_message form .input_item textarea,
-.add_courses form .input_item textarea {
+.add_courses form .input_item textarea,
+.popup_collage form .input_item textarea {
   height: 100px;
 }
 .add_client form .input_file span,
 .popup_filter form .input_file span,
 .add_message form .input_file span,
-.add_courses form .input_file span {
+.add_courses form .input_file span,
+.popup_collage form .input_file span {
   font-size: 15px;
   font-weight: 500;
 }
 .add_client form .input_file label,
 .popup_filter form .input_file label,
 .add_message form .input_file label,
-.add_courses form .input_file label {
+.add_courses form .input_file label,
+.popup_collage form .input_file label {
   padding: 8px;
   background: #eff1f6;
   font-size: 15px;
@@ -520,13 +536,31 @@ main > .content > .right.scale {
 .add_client form .input_file input,
 .popup_filter form .input_file input,
 .add_message form .input_file input,
-.add_courses form .input_file input {
+.add_courses form .input_file input,
+.popup_collage form .input_file input {
   display: none;
+}
+.add_client form .input_checkbox,
+.popup_filter form .input_checkbox,
+.add_message form .input_checkbox,
+.add_courses form .input_checkbox,
+.popup_collage form .input_checkbox {
+  margin-bottom: 10px;
+}
+.add_client form .input_checkbox label,
+.popup_filter form .input_checkbox label,
+.add_message form .input_checkbox label,
+.add_courses form .input_checkbox label,
+.popup_collage form .input_checkbox label {
+  font-size: 15px;
+  font-weight: 500;
+  color: #324664;
 }
 .add_client form .btn_add,
 .popup_filter form .btn_add,
 .add_message form .btn_add,
-.add_courses form .btn_add {
+.add_courses form .btn_add,
+.popup_collage form .btn_add {
   background-color: #1362fc;
   padding: 7px;
   color: white;
@@ -798,6 +832,26 @@ main > .content > .right.scale {
 .table_container .content .head_tabel .info_head_table .btn_filter i {
   font-size: 16px;
 }
+.table_container .content .head_tabel .info_head_table .btn_collage {
+  background-color: #324664;
+  color: white;
+  font-weight: 600;
+  padding: 6px 20px;
+  border-radius: 4px;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+  font-size: 15px;
+  min-width: 140px;
+}
+.table_container .content .head_tabel .info_head_table .btn_collage i {
+  font-size: 15px;
+}
 .table_container .content .head_tabel .search_input {
   border: 1px solid #c9cfd6;
   display: -webkit-box;
@@ -985,8 +1039,9 @@ main > .content > .right.scale {
 }
 .add_section {
   background-color: white;
-  border: 1px solid #cfcfcf;
+  border: 1px solid #e2e2e2;
   margin: 10px;
+  border-radius: 7px;
 }
 .add_section .head {
   padding: 15px;
@@ -1015,7 +1070,7 @@ main > .content > .right.scale {
 }
 .add_section form .row {
   padding-bottom: 30px;
-  border-bottom: 1px solid #cfcfcf;
+  border-bottom: 1px solid #e2e2e2;
 }
 .add_section form .row .input_item {
   margin-bottom: 15px;
@@ -1023,6 +1078,77 @@ main > .content > .right.scale {
 .add_section form .row .input_item label {
   font-weight: 500;
   margin-bottom: 5px;
+  color: #324664;
+}
+.add_section form .row .input_item input {
+  padding: 5px;
+  border-radius: 6px;
+}
+.add_section form .row .input_item select {
+  font-size: 14px;
+  color: #999999;
+}
+.add_section form .row .input_item #multiple-select {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+.add_section form .row .input_item #multiple-select .vscomp-toggle-button {
+  border-radius: 6px !important;
+  font-size: 16px;
+}
+.add_section form .row .input_switch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+.add_section form .row .input_switch span {
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #324664;
+  display: block;
+}
+.add_section form .row .input_switch input[type=checkbox] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+.add_section form .row .input_switch label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 50px;
+  height: 22px;
+  background: grey;
+  display: block;
+  border-radius: 100px;
+  position: relative;
+}
+.add_section form .row .input_switch label:after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 5px;
+  width: 18px;
+  height: 18px;
+  background: #fff;
+  border-radius: 90px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.add_section form .row .input_switch input:checked + label {
+  background: #bada55;
+}
+.add_section form .row .input_switch input:checked + label:after {
+  left: calc(100% - 5px);
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+.add_section form .row .input_switch label:active:after {
+  width: 130px;
 }
 .add_section form .btns {
   padding: 15px 0 0;
@@ -1057,7 +1183,11 @@ main > .content > .right.scale {
     font-size: 14px;
   }
   .add_section form .row .input_item input {
-    padding: 0;
+    padding: 4px 8px;
+    font-size: 15px;
+  }
+  .add_section form .row .input_item select {
+    padding: 4px 2.25rem 4px 0.75rem;
     font-size: 15px;
   }
   .add_section form .btns {
@@ -1717,7 +1847,7 @@ main > .content > .right.scale {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 20px;
+  gap: 7px;
   margin-bottom: 15px;
 }
 .content_profile_student .info_details_profile .Personal_information .item h6 {
@@ -1728,17 +1858,24 @@ main > .content > .right.scale {
   color: gray;
   font-size: 15px;
 }
-.content_profile_student .follow_up_links {
+.content_profile_student .follow_up_links,
+.content_profile_student .courses_student {
   background-color: white;
   -webkit-box-shadow: 0rem 0.3125rem 0.3125rem 0rem rgba(82, 63, 105, 0.05);
           box-shadow: 0rem 0.3125rem 0.3125rem 0rem rgba(82, 63, 105, 0.05);
   border-radius: 15px;
 }
-.content_profile_student .follow_up_links .head_links {
+.content_profile_student .follow_up_links .head_links,
+.content_profile_student .follow_up_links .head_courses,
+.content_profile_student .courses_student .head_links,
+.content_profile_student .courses_student .head_courses {
   border-bottom: 1px solid rgb(210, 210, 210);
   padding: 10px 20px;
 }
-.content_profile_student .follow_up_links .head_links h4 {
+.content_profile_student .follow_up_links .head_links h4,
+.content_profile_student .follow_up_links .head_courses h4,
+.content_profile_student .courses_student .head_links h4,
+.content_profile_student .courses_student .head_courses h4 {
   color: #1362fc;
   position: relative;
   width: -webkit-fit-content;
@@ -1746,7 +1883,10 @@ main > .content > .right.scale {
   width: fit-content;
   margin-bottom: 0;
 }
-.content_profile_student .follow_up_links .head_links h4::before {
+.content_profile_student .follow_up_links .head_links h4::before,
+.content_profile_student .follow_up_links .head_courses h4::before,
+.content_profile_student .courses_student .head_links h4::before,
+.content_profile_student .courses_student .head_courses h4::before {
   content: "";
   position: absolute;
   bottom: -11px;
@@ -1755,65 +1895,110 @@ main > .content > .right.scale {
   height: 1px;
   background-color: #1362fc;
 }
-.content_profile_student .follow_up_links .table_links {
+.content_profile_student .follow_up_links .table_links,
+.content_profile_student .follow_up_links .table_courses,
+.content_profile_student .courses_student .table_links,
+.content_profile_student .courses_student .table_courses {
   padding: 10px;
   margin-top: 10px;
 }
-.content_profile_student .follow_up_links .table_links table {
+.content_profile_student .follow_up_links .table_links table,
+.content_profile_student .follow_up_links .table_courses table,
+.content_profile_student .courses_student .table_links table,
+.content_profile_student .courses_student .table_courses table {
   width: 100%;
   text-align: center;
 }
-.content_profile_student .follow_up_links .table_links table thead tr {
+.content_profile_student .follow_up_links .table_links table thead tr,
+.content_profile_student .follow_up_links .table_courses table thead tr,
+.content_profile_student .courses_student .table_links table thead tr,
+.content_profile_student .courses_student .table_courses table thead tr {
   background-color: white;
   -webkit-box-shadow: 0px 1px 3px 0px rgba(54, 74, 99, 0.05);
           box-shadow: 0px 1px 3px 0px rgba(54, 74, 99, 0.05);
   border-bottom: 1px solid #e9eaeb;
 }
-.content_profile_student .follow_up_links .table_links table thead tr th {
+.content_profile_student .follow_up_links .table_links table thead tr th,
+.content_profile_student .follow_up_links .table_courses table thead tr th,
+.content_profile_student .courses_student .table_links table thead tr th,
+.content_profile_student .courses_student .table_courses table thead tr th {
   color: #8094ae;
   padding: 8px 0;
   min-width: 50px;
   font-size: 15px;
 }
-.content_profile_student .follow_up_links .table_links table thead tr th:nth-child(1) {
+.content_profile_student .follow_up_links .table_links table thead tr th:nth-child(1),
+.content_profile_student .follow_up_links .table_courses table thead tr th:nth-child(1),
+.content_profile_student .courses_student .table_links table thead tr th:nth-child(1),
+.content_profile_student .courses_student .table_courses table thead tr th:nth-child(1) {
   border-radius: 5px;
 }
-.content_profile_student .follow_up_links .table_links table thead tr th:last-child {
+.content_profile_student .follow_up_links .table_links table thead tr th:last-child,
+.content_profile_student .follow_up_links .table_courses table thead tr th:last-child,
+.content_profile_student .courses_student .table_links table thead tr th:last-child,
+.content_profile_student .courses_student .table_courses table thead tr th:last-child {
   border-radius: 5px;
 }
-.content_profile_student .follow_up_links .table_links table tbody tr {
+.content_profile_student .follow_up_links .table_links table tbody tr,
+.content_profile_student .follow_up_links .table_courses table tbody tr,
+.content_profile_student .courses_student .table_links table tbody tr,
+.content_profile_student .courses_student .table_courses table tbody tr {
   background-color: white;
 }
-.content_profile_student .follow_up_links .table_links table tbody tr:not(:last-child) {
+.content_profile_student .follow_up_links .table_links table tbody tr:not(:last-child),
+.content_profile_student .follow_up_links .table_courses table tbody tr:not(:last-child),
+.content_profile_student .courses_student .table_links table tbody tr:not(:last-child),
+.content_profile_student .courses_student .table_courses table tbody tr:not(:last-child) {
   border-bottom: 1px solid #e9eaeb;
 }
-.content_profile_student .follow_up_links .table_links table tbody tr td {
+.content_profile_student .follow_up_links .table_links table tbody tr td,
+.content_profile_student .follow_up_links .table_courses table tbody tr td,
+.content_profile_student .courses_student .table_links table tbody tr td,
+.content_profile_student .courses_student .table_courses table tbody tr td {
   color: #8094ae;
   padding: 8px 0;
   min-width: 50px;
   font-size: 14px;
 }
-.content_profile_student .follow_up_links .table_links table tbody tr td:nth-child(1) {
+.content_profile_student .follow_up_links .table_links table tbody tr td:nth-child(1),
+.content_profile_student .follow_up_links .table_courses table tbody tr td:nth-child(1),
+.content_profile_student .courses_student .table_links table tbody tr td:nth-child(1),
+.content_profile_student .courses_student .table_courses table tbody tr td:nth-child(1) {
   color: #0d6efd;
   border-radius: 5px;
 }
-.content_profile_student .follow_up_links .table_links table tbody tr td:last-child {
+.content_profile_student .follow_up_links .table_links table tbody tr td:last-child,
+.content_profile_student .follow_up_links .table_courses table tbody tr td:last-child,
+.content_profile_student .courses_student .table_links table tbody tr td:last-child,
+.content_profile_student .courses_student .table_courses table tbody tr td:last-child {
   border-radius: 5px;
   color: #ffc368;
 }
-.content_profile_student .follow_up_links .table_links table tbody tr td .contact {
+.content_profile_student .follow_up_links .table_links table tbody tr td .contact,
+.content_profile_student .follow_up_links .table_courses table tbody tr td .contact,
+.content_profile_student .courses_student .table_links table tbody tr td .contact,
+.content_profile_student .courses_student .table_courses table tbody tr td .contact {
   padding: 3px 10px;
   border-radius: 50px;
   font-weight: 500;
   font-size: 13px;
 }
-.content_profile_student .follow_up_links .table_links table tbody tr td .contact.active {
+.content_profile_student .follow_up_links .table_links table tbody tr td .contact.active,
+.content_profile_student .follow_up_links .table_courses table tbody tr td .contact.active,
+.content_profile_student .courses_student .table_links table tbody tr td .contact.active,
+.content_profile_student .courses_student .table_courses table tbody tr td .contact.active {
   background-color: #c8f2d1;
   color: #37d159;
 }
-.content_profile_student .follow_up_links .table_links table tbody tr td .contact.offline {
+.content_profile_student .follow_up_links .table_links table tbody tr td .contact.offline,
+.content_profile_student .follow_up_links .table_courses table tbody tr td .contact.offline,
+.content_profile_student .courses_student .table_links table tbody tr td .contact.offline,
+.content_profile_student .courses_student .table_courses table tbody tr td .contact.offline {
   background-color: #ffd4cb;
   color: #ff6746;
+}
+.content_profile_student .courses_student {
+  margin-top: 20px;
 }
 
 @media (max-width: 768px) {
@@ -1889,7 +2074,7 @@ main > .content > .right.scale {
   }
   .content_profile_student .info_details_profile .Personal_information h5 {
     font-size: 17px;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
   }
   .content_profile_student .info_details_profile .Personal_information .item {
     margin-bottom: 7px;
@@ -1901,26 +2086,52 @@ main > .content > .right.scale {
   .content_profile_student .info_details_profile .Personal_information .item span {
     font-size: 14px;
   }
-  .content_profile_student .follow_up_links .head_links {
+  .content_profile_student .follow_up_links .head_links,
+.content_profile_student .follow_up_links .head_courses,
+.content_profile_student .courses_student .head_links,
+.content_profile_student .courses_student .head_courses {
     padding: 10px;
   }
-  .content_profile_student .follow_up_links .head_links h4 {
+  .content_profile_student .follow_up_links .head_links h4,
+.content_profile_student .follow_up_links .head_courses h4,
+.content_profile_student .courses_student .head_links h4,
+.content_profile_student .courses_student .head_courses h4 {
     font-size: 18px;
   }
-  .content_profile_student .follow_up_links .table_links {
+  .content_profile_student .follow_up_links .table_links,
+.content_profile_student .follow_up_links .table_courses,
+.content_profile_student .courses_student .table_links,
+.content_profile_student .courses_student .table_courses {
     padding: 1px;
     margin-top: 5px;
     overflow: auto;
   }
-  .content_profile_student .follow_up_links .table_links table {
+  .content_profile_student .follow_up_links .table_links table,
+.content_profile_student .follow_up_links .table_courses table,
+.content_profile_student .courses_student .table_links table,
+.content_profile_student .courses_student .table_courses table {
     overflow: auto;
   }
-  .content_profile_student .follow_up_links .table_links table thead tr th {
+  .content_profile_student .follow_up_links .table_links table thead tr th,
+.content_profile_student .follow_up_links .table_courses table thead tr th,
+.content_profile_student .courses_student .table_links table thead tr th,
+.content_profile_student .courses_student .table_courses table thead tr th {
     font-size: 14px;
-    min-width: 100px;
+    min-width: 120px;
   }
-  .content_profile_student .follow_up_links .table_links table tbody tr td {
+  .content_profile_student .follow_up_links .table_links table tbody tr td,
+.content_profile_student .follow_up_links .table_courses table tbody tr td,
+.content_profile_student .courses_student .table_links table tbody tr td,
+.content_profile_student .courses_student .table_courses table tbody tr td {
     font-size: 13px;
     min-width: 100px;
+  }
+  .content_profile_student .follow_up_links .table_links table tbody tr td .contact,
+.content_profile_student .follow_up_links .table_courses table tbody tr td .contact,
+.content_profile_student .courses_student .table_links table tbody tr td .contact,
+.content_profile_student .courses_student .table_courses table tbody tr td .contact {
+    padding: 3px 7px;
+    border-radius: 11px;
+    font-size: 10px;
   }
 }
