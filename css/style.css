@@ -132,6 +132,9 @@ main > .content > .right.scale {
   color: #324664;
   margin-bottom: 0;
 }
+.navbar_section .left .logo img {
+  width: 150px;
+}
 .navbar_section .right {
   display: -webkit-box;
   display: -ms-flexbox;
