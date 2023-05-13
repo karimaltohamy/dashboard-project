@@ -119,13 +119,13 @@
                 <div href="clients.html" class="item item_list" data-num="1">
                   <i class="fa-solid fa-angle-down arrow"></i>
                   <i class="fa-solid fa-user-group"></i>
-                  <span>العملاء</span>
+                  <span>الطلاب</span>
                 </div>
 
                 <ul class="list list1">
                   <li>
                     <span></span>
-                    <a href="clients.html">العملاء</a>
+                    <a href="clients.html">الطلاب</a>
                   </li>
                   <li>
                     <span></span>
@@ -139,6 +139,28 @@
                   <i class="fa-solid fa-users"></i>
                   <span>المجموعات</span>
                 </a>
+              </div>
+              <div class="mini_list">
+                <div class="item item_list" data-num="2">
+                  <i class="fa-solid fa-angle-down arrow"></i>
+                  <i class="fa-solid fa-graduation-cap"></i>
+                  <span>الكورسات</span>
+                </div>
+
+                <ul class="list list2">
+                  <li>
+                    <span></span>
+                    <a href="courses-landing.html">كورسات الموقع</a>
+                  </li>
+                  <li>
+                    <span></span>
+                    <a href="main-courses.html">جميع الكورسات</a>
+                  </li>
+                  <li>
+                    <span></span>
+                    <a href="create-course.html">انشاء كورس</a>
+                  </li>
+                </ul>
               </div>
 
               <div class="mini_list">
@@ -220,6 +242,28 @@
                 </div>
                 <div class="col-12 col-md-4">
                   <div class="input_item">
+                    <label for="">المقدم</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      aria-label="Username"
+                      aria-describedby="basic-addon1"
+                    />
+                  </div>
+                </div>
+                <div class="col-12 col-md-4">
+                  <div class="input_item">
+                    <label for="">باقي الاشتراك</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      aria-label="Username"
+                      aria-describedby="basic-addon1"
+                    />
+                  </div>
+                </div>
+                <div class="col-12 col-md-4">
+                  <div class="input_item">
                     <label for="">الاجمالي</label>
                     <input
                       type="number"
@@ -231,12 +275,12 @@
                 </div>
                 <div class="col-12 col-md-4">
                   <div class="input_item">
-                    <label for="">الاكونت</label>
+                    <label for="">اكونت SMS</label>
                     <select
                       class="form-select"
                       aria-label="Default select example"
                     >
-                      <option value="" selected>تحديد الاكونت</option>
+                      <option value="" selected>اكونت SMS</option>
                       <option value="">example@google.com</option>
                       <option value="">example2@google.com</option>
                     </select>
@@ -292,7 +336,7 @@
                     />
                   </div>
                 </div>
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-4">
                   <div class="input_item">
                     <label for="">موعد الارسال 2</label>
                     <input
@@ -303,7 +347,7 @@
                     />
                   </div>
                 </div>
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-4">
                   <div class="input_item">
                     <label for="">اسم الكليات</label>
                     <select
@@ -323,12 +367,13 @@
                     </select>
                   </div>
                 </div>
-
-                <div class="input_switch">
-                  <span>القبول</span>
-                  <input type="checkbox" id="switch" /><label for="switch"
-                    >Toggle</label
-                  >
+                <div class="col-12 col-md-4">
+                  <div class="input_switch">
+                    <span>القبول</span>
+                    <input type="checkbox" id="switch" /><label for="switch"
+                      >Toggle</label
+                    >
+                  </div>
                 </div>
               </div>
 

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>dashboard project | clients</title>
+    <title>dashboard project | main Courses</title>
     <link rel="stylesheet" href="css/style.css" />
     <!-- boostrap -->
     <link
@@ -25,11 +25,6 @@
       integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
-    />
-    <!-- Boxicons CSS -->
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
     />
   </head>
   <body>
@@ -114,11 +109,7 @@
               </div>
 
               <div class="mini_list">
-                <div
-                  href="clients.html"
-                  class="item item_list active"
-                  data-num="1"
-                >
+                <div href="clients.html" class="item item_list" data-num="1">
                   <i class="fa-solid fa-angle-down arrow"></i>
                   <i class="fa-solid fa-user-group"></i>
                   <span>الطلاب</span>
@@ -144,7 +135,7 @@
               </div>
 
               <div class="mini_list">
-                <div class="item item_list" data-num="2">
+                <div class="item item_list active" data-num="2">
                   <i class="fa-solid fa-angle-down arrow"></i>
                   <i class="fa-solid fa-graduation-cap"></i>
                   <span>الكورسات</span>
@@ -201,119 +192,159 @@
           </div>
         </div>
         <div class="right">
-          <div class="table_container">
+          <div class="table_container subscribers_table_container">
             <div class="content">
-              <div class="head_tabel">
-                <button class="btn_add btn_add_client">
-                  <i class="fa-solid fa-plus"></i>
-                  اضافه عميل
-                </button>
-
-                <div class="info_head_table">
-                  <div class="search_input">
-                    <input type="text" placeholder="ابحث" />
-                    <span>
-                      <i class="fa-solid fa-magnifying-glass"></i>
-                    </span>
-                  </div>
-                  <button class="btn_filter">
-                    <i class="fa-solid fa-filter"></i> فلتر
-                  </button>
-                </div>
+              <div class="head_section">
+                <h4>المشتركين</h4>
               </div>
 
               <div class="scroll_table">
                 <table>
                   <thead>
                     <tr>
-                      <th>#</th>
-                      <th>الاسم</th>
-                      <th>الهاتف</th>
-                      <th>الجامعه</th>
-                      <th>ملاحظات</th>
-                      <th>تاريخ الانشاء</th>
+                      <th>
+                        <input type="checkbox" id="select_all" />
+                      </th>
+                      <th>اسم الطالب</th>
+                      <th>المبلغ المدفوع</th>
+                      <th>رقم الهاتف</th>
+                      <th>طريقه الحضور</th>
+                      <th>معاد الكورس</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td>1</td>
-                      <td><a href="profile-student.html">محمد حسن</a></td>
-                      <td>+201155575986</td>
-                      <td>جامعه القاهره</td>
-                      <td></td>
+                      <td>
+                        <input
+                          type="checkbox"
+                          name="checkboxCourse"
+                          class="checkboxCourse"
+                          id="checkboxItem1"
+                        />
+                      </td>
+                      <td>احمد حسن</td>
+                      <td>180</td>
+                      <td>0108580609</td>
+                      <td>online</td>
                       <td>2023-04-27 14:58:14</td>
                     </tr>
                     <tr>
-                      <td>2</td>
-                      <td><a href="profile-student.html">محمد حسن</a></td>
-                      <td>+201155575986</td>
-                      <td>جامعه القاهره</td>
-                      <td></td>
+                      <td>
+                        <input
+                          type="checkbox"
+                          name="checkboxCourse"
+                          class="checkboxCourse"
+                          id="checkboxItem1"
+                        />
+                      </td>
+                      <td>احمد حسن</td>
+                      <td>180</td>
+                      <td>0108580609</td>
+                      <td>online</td>
                       <td>2023-04-27 14:58:14</td>
                     </tr>
                     <tr>
-                      <td>3</td>
-                      <td><a href="profile-student.html">محمد حسن</a></td>
-                      <td>+201155575986</td>
-                      <td>جامعه القاهره</td>
-                      <td></td>
+                      <td>
+                        <input
+                          type="checkbox"
+                          name="checkboxCourse"
+                          class="checkboxCourse"
+                          id="checkboxItem1"
+                        />
+                      </td>
+                      <td>احمد حسن</td>
+                      <td>180</td>
+                      <td>0108580609</td>
+                      <td>online</td>
                       <td>2023-04-27 14:58:14</td>
                     </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="pagination">
+                <div class="btns">
+                  <button><i class="fa-solid fa-angle-right"></i></button>
+                  <button class="active">1</button>
+                  <button>2</button>
+                  <button><i class="fa-solid fa-angle-left"></i></button>
+                </div>
+                <p>Showing <span>1</span> to <span>10</span> of 20 entries</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="table_container unsubscribers_table_container">
+            <div class="content">
+              <div class="head_section">
+                <h4>الغير مشتركين</h4>
+              </div>
+
+              <div class="scroll_table">
+                <table>
+                  <thead>
                     <tr>
-                      <td>4</td>
-                      <td><a href="profile-student.html">محمد حسن</a></td>
-                      <td>+201155575986</td>
-                      <td>جامعه القاهره</td>
-                      <td></td>
-                      <td>2023-04-27 14:58:14</td>
+                      <th>
+                        <input type="checkbox" id="select_all2" />
+                      </th>
+                      <th>اسم الطالب</th>
+                      <th>اسم الكليه</th>
+                      <th>اسم الجامعه</th>
+                      <th>رقم الموبيل</th>
+                      <th>أجراءات</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <input
+                          type="checkbox"
+                          name="checkboxCourse"
+                          class="checkboxCourse2"
+                          id="checkboxItem1"
+                        />
+                      </td>
+                      <td>احمد حسن</td>
+                      <td>كليه التجاره</td>
+                      <td>جامعه دمنهور</td>
+                      <td>0100895795</td>
+                      <td>
+                        <button class="btn_accept">قبول</button>
+                      </td>
                     </tr>
                     <tr>
-                      <td>5</td>
-                      <td><a href="profile-student.html">محمد حسن</a></td>
-                      <td>+201155575986</td>
-                      <td>جامعه القاهره</td>
-                      <td></td>
-                      <td>2023-04-27 14:58:14</td>
+                      <td>
+                        <input
+                          type="checkbox"
+                          name="checkboxCourse"
+                          class="checkboxCourse2"
+                          id="checkboxItem1"
+                        />
+                      </td>
+                      <td>احمد حسن</td>
+                      <td>كليه التجاره</td>
+                      <td>جامعه دمنهور</td>
+                      <td>0100895795</td>
+                      <td>
+                        <button class="btn_accept">قبول</button>
+                      </td>
                     </tr>
                     <tr>
-                      <td>6</td>
-                      <td><a href="profile-student.html">محمد حسن</a></td>
-                      <td>+201155575986</td>
-                      <td>جامعه القاهره</td>
-                      <td></td>
-                      <td>2023-04-27 14:58:14</td>
-                    </tr>
-                    <tr>
-                      <td>7</td>
-                      <td><a href="profile-student.html">محمد حسن</a></td>
-                      <td>+201155575986</td>
-                      <td>جامعه القاهره</td>
-                      <td></td>
-                      <td>2023-04-27 14:58:14</td>
-                    </tr>
-                    <tr>
-                      <td>8</td>
-                      <td><a href="profile-student.html">محمد حسن</a></td>
-                      <td>+201155575986</td>
-                      <td>جامعه القاهره</td>
-                      <td></td>
-                      <td>2023-04-27 14:58:14</td>
-                    </tr>
-                    <tr>
-                      <td>9</td>
-                      <td><a href="profile-student.html">محمد حسن</a></td>
-                      <td>+201155575986</td>
-                      <td>جامعه القاهره</td>
-                      <td></td>
-                      <td>2023-04-27 14:58:14</td>
-                    </tr>
-                    <tr>
-                      <td>10</td>
-                      <td><a href="profile-student.html">محمد حسن</a></td>
-                      <td>+201155575986</td>
-                      <td>جامعه القاهره</td>
-                      <td></td>
-                      <td>2023-04-27 14:58:14</td>
+                      <td>
+                        <input
+                          type="checkbox"
+                          name="checkboxCourse"
+                          class="checkboxCourse2"
+                          id="checkboxItem1"
+                        />
+                      </td>
+                      <td>احمد حسن</td>
+                      <td>كليه التجاره</td>
+                      <td>جامعه دمنهور</td>
+                      <td>0100895795</td>
+                      <td>
+                        <button class="btn_accept">قبول</button>
+                      </td>
                     </tr>
                   </tbody>
                 </table>
@@ -335,106 +366,33 @@
     </main>
     <!-- end main -->
 
-    <!-- start popup add client -->
-    <div class="overflow"></div>
-    <div class="add_client add_popup">
-      <div class="head">
-        <h3>
-          <span><i class="fa-solid fa-user-tie"></i></span> اضافه عميل
-        </h3>
-        <i class="fa-solid fa-xmark close_popup"></i>
-      </div>
-
-      <form action="">
-        <div class="row">
-          <div class="col-12 col-md-6">
-            <div class="input_item">
-              <label for="">الاسم </label>
-              <input type="text" placeholder="اسمك" />
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6">
-            <div class="input_item">
-              <label for="">السن </label>
-              <input type="number" placeholder="سنك" />
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6">
-            <div class="input_item">
-              <label for="">العنوان </label>
-              <input type="text" placeholder="عنوانك" />
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6">
-            <div class="input_item">
-              <label for="">اسم الكورس </label>
-              <input type="text" placeholder="اسم الكورس" />
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6">
-            <div class="input_item">
-              <label for=""> رقم الموبيل </label>
-              <input type="text" placeholder="رقم الموبيل" />
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6">
-            <div class="input_item">
-              <label for="">الايميل</label>
-              <input type="text" placeholder="الايميل" />
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6">
-            <div class="input_item">
-              <label for="">اسم الجامعه</label>
-              <input type="text" placeholder="اسم الجامعه" />
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6">
-            <div class="input_item">
-              <label for="">الفرقه الدراسيه</label>
-              <input type="text" placeholder="الفرقه الدراسيه" />
-            </div>
-          </div>
-        </div>
-
-        <button class="btn_add">Add <i class="fa-solid fa-plus"></i></button>
-      </form>
-    </div>
-    <!-- end popup add client -->
-
-    <!-- start popup filter -->
-    <div class="popup_filter">
-      <div class="head">
-        <h3>فلتر</h3>
-        <i class="fa-solid fa-xmark close_popup_filter"></i>
-      </div>
-
-      <form action="">
-        <div class="input_item">
-          <label for="">اسم الكورس </label>
-          <input type="text" placeholder="اسم الكورس" />
-        </div>
-        <div class="input_item">
-          <label for=""> من</label>
-          <input type="date" placeholder="" />
-        </div>
-        <div class="input_item">
-          <label for=""> الي</label>
-          <input type="date" placeholder="" />
-        </div>
-        <button class="btn_add">filter</button>
-      </form>
-    </div>
-    <!-- end popup filter -->
-
     <script src="js/main.js"></script>
-    <script src="js/handle-popup.js"></script>
+    <script>
+      //   checkbox select
+      const selectAll = document.querySelector("#select_all");
+      const checkboxsCourses = document.querySelectorAll(".checkboxCourse");
+      const selectAll2 = document.querySelector("#select_all2");
+      const checkboxsCourses2 = document.querySelectorAll(".checkboxCourse2");
+
+      selectAll.addEventListener("click", () => {
+        checkboxsCourses.forEach((item) => {
+          if (selectAll.checked === true) {
+            item.checked = true;
+          } else {
+            item.checked = false;
+          }
+        });
+      });
+
+      selectAll2.addEventListener("click", () => {
+        checkboxsCourses2.forEach((item) => {
+          if (selectAll2.checked === true) {
+            item.checked = true;
+          } else {
+            item.checked = false;
+          }
+        });
+      });
+    </script>
   </body>
 </html>

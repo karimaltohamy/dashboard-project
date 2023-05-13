@@ -135,6 +135,21 @@ $dark-text: #324664;
       }
     }
 
+    .input-group {
+      direction: ltr;
+
+      .input-group-text {
+        position: relative;
+
+        &::after {
+          content: "filter";
+          margin-left: 5px;
+          color: $dark-text;
+          font-weight: 500;
+        }
+      }
+    }
+
     .btn_add {
       background-color: $primary-color;
       padding: 7px;

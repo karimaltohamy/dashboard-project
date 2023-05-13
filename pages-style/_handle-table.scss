@@ -5,6 +5,15 @@ $dark-text: #324664;
 .table_container {
   height: 100%;
 
+  &.subscribers_table_container,
+  &.unsubscribers_table_container {
+    height: auto;
+  }
+
+  &.unsubscribers_table_container {
+    margin-top: 40px;
+  }
+
   .content {
     .toolbar_table {
       display: flex;
@@ -169,6 +178,11 @@ $dark-text: #324664;
             &:last-child {
               border-radius: 5px;
             }
+
+            input[type="checkbox"] {
+              width: 15px;
+              height: 15px;
+            }
           }
         }
       }
@@ -195,6 +209,11 @@ $dark-text: #324664;
               color: #ffc368;
             }
 
+            input[type="checkbox"] {
+              width: 15px;
+              height: 15px;
+            }
+
             .contact {
               padding: 3px 10px;
               border-radius: 50px;
@@ -210,6 +229,15 @@ $dark-text: #324664;
                 background-color: #ffd4cb;
                 color: #ff6746;
               }
+            }
+
+            .btn_accept {
+              background-color: #37d159;
+              color: white;
+              border-radius: 5px;
+              padding: 3px 10px;
+              border: none;
+              font-size: 15px;
             }
           }
         }
@@ -257,18 +285,14 @@ $dark-text: #324664;
   .table_container {
     padding: 8px;
 
-    .content {
-      .toolbar_table {
-        p {
-          font-size: 13px;
-        }
+    &.unsubscribers_table_container {
+      margin-top: 20px;
+    }
 
-        .btns {
-          .btn_filter,
-          .btn_relaod {
-            padding: 5px;
-            font-size: 13px;
-          }
+    .content {
+      .head_section {
+        h4 {
+          margin-bottom: 6px;
         }
       }
 

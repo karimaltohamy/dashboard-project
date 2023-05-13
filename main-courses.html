@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>dashboard project | clients</title>
+    <title>dashboard project | main Courses</title>
     <link rel="stylesheet" href="css/style.css" />
     <!-- boostrap -->
     <link
@@ -25,11 +25,6 @@
       integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
-    />
-    <!-- Boxicons CSS -->
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
     />
   </head>
   <body>
@@ -114,14 +109,10 @@
               </div>
 
               <div class="mini_list">
-                <div
-                  href="clients.html"
-                  class="item item_list active"
-                  data-num="1"
-                >
+                <div href="clients.html" class="item item_list" data-num="1">
                   <i class="fa-solid fa-angle-down arrow"></i>
                   <i class="fa-solid fa-user-group"></i>
-                  <span>الطلاب</span>
+                  <span>العملاء</span>
                 </div>
 
                 <ul class="list list1">
@@ -144,7 +135,7 @@
               </div>
 
               <div class="mini_list">
-                <div class="item item_list" data-num="2">
+                <div class="item item_list active" data-num="2">
                   <i class="fa-solid fa-angle-down arrow"></i>
                   <i class="fa-solid fa-graduation-cap"></i>
                   <span>الكورسات</span>
@@ -204,9 +195,9 @@
           <div class="table_container">
             <div class="content">
               <div class="head_tabel">
-                <button class="btn_add btn_add_client">
+                <button class="btn_add">
                   <i class="fa-solid fa-plus"></i>
-                  اضافه عميل
+                  اضافه كورس
                 </button>
 
                 <div class="info_head_table">
@@ -216,8 +207,10 @@
                       <i class="fa-solid fa-magnifying-glass"></i>
                     </span>
                   </div>
-                  <button class="btn_filter">
-                    <i class="fa-solid fa-filter"></i> فلتر
+
+                  <button class="btn_collage">
+                    <i class="fa-solid fa-building-columns"></i>
+                    اضافه جامعه
                   </button>
                 </div>
               </div>
@@ -226,93 +219,53 @@
                 <table>
                   <thead>
                     <tr>
-                      <th>#</th>
-                      <th>الاسم</th>
-                      <th>الهاتف</th>
-                      <th>الجامعه</th>
-                      <th>ملاحظات</th>
+                      <th>
+                        <input type="checkbox" id="select_all" />
+                      </th>
+                      <th>اسم الكورس</th>
+                      <th>مقدم من</th>
+                      <th>الاجمالي</th>
+                      <th>المقدم</th>
                       <th>تاريخ الانشاء</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td>1</td>
-                      <td><a href="profile-student.html">محمد حسن</a></td>
-                      <td>+201155575986</td>
-                      <td>جامعه القاهره</td>
-                      <td></td>
+                      <td>
+                        <input
+                          type="checkbox"
+                          name="checkboxCourse"
+                          class="checkboxCourse"
+                          id="checkboxItem1"
+                        />
+                      </td>
+                      <td>
+                        <a href="student-main-course.html">
+                          Learn Figma - UI/UX Design Essential Training
+                        </a>
+                      </td>
+                      <td>محمد احمد</td>
+                      <td>550</td>
+                      <td>200</td>
                       <td>2023-04-27 14:58:14</td>
                     </tr>
                     <tr>
-                      <td>2</td>
-                      <td><a href="profile-student.html">محمد حسن</a></td>
-                      <td>+201155575986</td>
-                      <td>جامعه القاهره</td>
-                      <td></td>
-                      <td>2023-04-27 14:58:14</td>
-                    </tr>
-                    <tr>
-                      <td>3</td>
-                      <td><a href="profile-student.html">محمد حسن</a></td>
-                      <td>+201155575986</td>
-                      <td>جامعه القاهره</td>
-                      <td></td>
-                      <td>2023-04-27 14:58:14</td>
-                    </tr>
-                    <tr>
-                      <td>4</td>
-                      <td><a href="profile-student.html">محمد حسن</a></td>
-                      <td>+201155575986</td>
-                      <td>جامعه القاهره</td>
-                      <td></td>
-                      <td>2023-04-27 14:58:14</td>
-                    </tr>
-                    <tr>
-                      <td>5</td>
-                      <td><a href="profile-student.html">محمد حسن</a></td>
-                      <td>+201155575986</td>
-                      <td>جامعه القاهره</td>
-                      <td></td>
-                      <td>2023-04-27 14:58:14</td>
-                    </tr>
-                    <tr>
-                      <td>6</td>
-                      <td><a href="profile-student.html">محمد حسن</a></td>
-                      <td>+201155575986</td>
-                      <td>جامعه القاهره</td>
-                      <td></td>
-                      <td>2023-04-27 14:58:14</td>
-                    </tr>
-                    <tr>
-                      <td>7</td>
-                      <td><a href="profile-student.html">محمد حسن</a></td>
-                      <td>+201155575986</td>
-                      <td>جامعه القاهره</td>
-                      <td></td>
-                      <td>2023-04-27 14:58:14</td>
-                    </tr>
-                    <tr>
-                      <td>8</td>
-                      <td><a href="profile-student.html">محمد حسن</a></td>
-                      <td>+201155575986</td>
-                      <td>جامعه القاهره</td>
-                      <td></td>
-                      <td>2023-04-27 14:58:14</td>
-                    </tr>
-                    <tr>
-                      <td>9</td>
-                      <td><a href="profile-student.html">محمد حسن</a></td>
-                      <td>+201155575986</td>
-                      <td>جامعه القاهره</td>
-                      <td></td>
-                      <td>2023-04-27 14:58:14</td>
-                    </tr>
-                    <tr>
-                      <td>10</td>
-                      <td><a href="profile-student.html">محمد حسن</a></td>
-                      <td>+201155575986</td>
-                      <td>جامعه القاهره</td>
-                      <td></td>
+                      <td>
+                        <input
+                          type="checkbox"
+                          name="checkboxCourse"
+                          class="checkboxCourse"
+                          id="checkboxItem2"
+                        />
+                      </td>
+                      <td>
+                        <a href="profile-course.html">
+                          Learn Figma - UI/UX Design Essential Training
+                        </a>
+                      </td>
+                      <td>محمد احمد</td>
+                      <td>550</td>
+                      <td>200</td>
                       <td>2023-04-27 14:58:14</td>
                     </tr>
                   </tbody>
@@ -337,71 +290,62 @@
 
     <!-- start popup add client -->
     <div class="overflow"></div>
-    <div class="add_client add_popup">
+    <div class="add_courses add_popup">
       <div class="head">
         <h3>
-          <span><i class="fa-solid fa-user-tie"></i></span> اضافه عميل
+          <span><i class="fa-solid fa-school"></i></span> اضافه كورس
         </h3>
         <i class="fa-solid fa-xmark close_popup"></i>
       </div>
 
       <form action="">
         <div class="row">
-          <div class="col-12 col-md-6">
+          <div class="col-6">
             <div class="input_item">
-              <label for="">الاسم </label>
-              <input type="text" placeholder="اسمك" />
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6">
-            <div class="input_item">
-              <label for="">السن </label>
-              <input type="number" placeholder="سنك" />
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6">
-            <div class="input_item">
-              <label for="">العنوان </label>
-              <input type="text" placeholder="عنوانك" />
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6">
-            <div class="input_item">
-              <label for="">اسم الكورس </label>
+              <label for=""> اسم الكورس</label>
               <input type="text" placeholder="اسم الكورس" />
             </div>
           </div>
-
-          <div class="col-12 col-md-6">
+          <div class="col-6">
             <div class="input_item">
-              <label for=""> رقم الموبيل </label>
-              <input type="text" placeholder="رقم الموبيل" />
+              <label for=""> نوع الكورس</label>
+              <input type="text" placeholder="نوع الكورس" />
             </div>
           </div>
-
-          <div class="col-12 col-md-6">
+          <div class="col-6">
             <div class="input_item">
-              <label for="">الايميل</label>
-              <input type="text" placeholder="الايميل" />
+              <label for=""> عدد الدروس</label>
+              <input type="number" placeholder=" عدد الدروس" />
             </div>
           </div>
-
-          <div class="col-12 col-md-6">
+          <div class="col-6">
             <div class="input_item">
-              <label for="">اسم الجامعه</label>
-              <input type="text" placeholder="اسم الجامعه" />
+              <label for="">وقت الكورس</label>
+              <input type="number" placeholder="وقت الدروس" />
             </div>
           </div>
-
-          <div class="col-12 col-md-6">
+          <div class="col-6">
             <div class="input_item">
-              <label for="">الفرقه الدراسيه</label>
-              <input type="text" placeholder="الفرقه الدراسيه" />
+              <label for=""> السعر</label>
+              <input type="number" placeholder="السعر" />
             </div>
           </div>
+          <div class="col-6">
+            <div class="input_item">
+              <label for=""> المستوي</label>
+              <input type="text" placeholder="المستوي" />
+            </div>
+          </div>
+        </div>
+
+        <div class="input_item">
+          <label for="">وصف</label>
+          <textarea name="" id="" placeholder="وصف"></textarea>
+        </div>
+        <div class="input_item input_file">
+          <span> صوره الكورس</span>
+          <label for="file_message" class="file_lebel">اختار صوره الكورس</label>
+          <input type="file" id="file_message" />
         </div>
 
         <button class="btn_add">Add <i class="fa-solid fa-plus"></i></button>
@@ -409,32 +353,72 @@
     </div>
     <!-- end popup add client -->
 
-    <!-- start popup filter -->
-    <div class="popup_filter">
+    <!-- start popup add collage -->
+    <div class="popup_collage">
       <div class="head">
-        <h3>فلتر</h3>
-        <i class="fa-solid fa-xmark close_popup_filter"></i>
+        <h3>
+          <span><i class="fa-solid fa-school"></i></span>
+          اضافه جامعه
+        </h3>
+        <i class="fa-solid fa-xmark close_popup_collage"></i>
       </div>
 
       <form action="">
         <div class="input_item">
-          <label for="">اسم الكورس </label>
-          <input type="text" placeholder="اسم الكورس" />
+          <label for="">اضافه جامعه</label>
+          <div class="input-group mb-3">
+            <div class="input-group-text">
+              <input
+                class="form-check-input mt-0"
+                type="checkbox"
+                value=""
+                aria-label="Checkbox for following text input"
+              />
+            </div>
+            <input
+              type="text"
+              class="form-control checkbox_filter"
+              aria-label="Text input with checkbox"
+            />
+          </div>
         </div>
-        <div class="input_item">
-          <label for=""> من</label>
-          <input type="date" placeholder="" />
-        </div>
-        <div class="input_item">
-          <label for=""> الي</label>
-          <input type="date" placeholder="" />
-        </div>
-        <button class="btn_add">filter</button>
+
+        <button class="btn_add"><i class="fa-solid fa-plus"></i> Add</button>
       </form>
     </div>
-    <!-- end popup filter -->
+    <!-- end popup add collage -->
 
     <script src="js/main.js"></script>
     <script src="js/handle-popup.js"></script>
+    <script>
+      // popup add collage in courses page
+      const popupCollage = document.querySelector(".popup_collage");
+      const btnCollage = document.querySelector(".btn_collage");
+      const btnCloseCollage = document.querySelector(".close_popup_collage");
+
+      btnCollage.addEventListener("click", () => {
+        popupCollage.classList.add("active");
+        overflow.classList.add("active");
+      });
+
+      btnCloseCollage.addEventListener("click", () => {
+        popupCollage.classList.remove("active");
+        overflow.classList.remove("active");
+      });
+
+      //   checkbox select
+      const selectAll = document.querySelector("#select_all");
+      const checkboxsCourses = document.querySelectorAll(".checkboxCourse");
+
+      selectAll.addEventListener("click", () => {
+        checkboxsCourses.forEach((item) => {
+          if (selectAll.checked === true) {
+            item.checked = true;
+          } else {
+            item.checked = false;
+          }
+        });
+      });
+    </script>
   </body>
 </html>

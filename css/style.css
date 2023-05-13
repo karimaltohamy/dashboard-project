@@ -556,6 +556,30 @@ main > .content > .right.scale {
   font-weight: 500;
   color: #324664;
 }
+.add_client form .input-group,
+.popup_filter form .input-group,
+.add_message form .input-group,
+.add_courses form .input-group,
+.popup_collage form .input-group {
+  direction: ltr;
+}
+.add_client form .input-group .input-group-text,
+.popup_filter form .input-group .input-group-text,
+.add_message form .input-group .input-group-text,
+.add_courses form .input-group .input-group-text,
+.popup_collage form .input-group .input-group-text {
+  position: relative;
+}
+.add_client form .input-group .input-group-text::after,
+.popup_filter form .input-group .input-group-text::after,
+.add_message form .input-group .input-group-text::after,
+.add_courses form .input-group .input-group-text::after,
+.popup_collage form .input-group .input-group-text::after {
+  content: "filter";
+  margin-left: 5px;
+  color: #324664;
+  font-weight: 500;
+}
 .add_client form .btn_add,
 .popup_filter form .btn_add,
 .add_message form .btn_add,
@@ -724,6 +748,12 @@ main > .content > .right.scale {
 }
 .table_container {
   height: 100%;
+}
+.table_container.subscribers_table_container, .table_container.unsubscribers_table_container {
+  height: auto;
+}
+.table_container.unsubscribers_table_container {
+  margin-top: 40px;
 }
 .table_container .content .toolbar_table {
   display: -webkit-box;
@@ -896,6 +926,10 @@ main > .content > .right.scale {
 .table_container .content table thead tr th:last-child {
   border-radius: 5px;
 }
+.table_container .content table thead tr th input[type=checkbox] {
+  width: 15px;
+  height: 15px;
+}
 .table_container .content table tbody tr {
   background-color: white;
 }
@@ -915,6 +949,10 @@ main > .content > .right.scale {
   border-radius: 5px;
   color: #ffc368;
 }
+.table_container .content table tbody tr td input[type=checkbox] {
+  width: 15px;
+  height: 15px;
+}
 .table_container .content table tbody tr td .contact {
   padding: 3px 10px;
   border-radius: 50px;
@@ -928,6 +966,14 @@ main > .content > .right.scale {
 .table_container .content table tbody tr td .contact.offline {
   background-color: #ffd4cb;
   color: #ff6746;
+}
+.table_container .content table tbody tr td .btn_accept {
+  background-color: #37d159;
+  color: white;
+  border-radius: 5px;
+  padding: 3px 10px;
+  border: none;
+  font-size: 15px;
 }
 .table_container .content .pagination {
   display: -webkit-box;
@@ -975,13 +1021,11 @@ main > .content > .right.scale {
   .table_container {
     padding: 8px;
   }
-  .table_container .content .toolbar_table p {
-    font-size: 13px;
+  .table_container.unsubscribers_table_container {
+    margin-top: 20px;
   }
-  .table_container .content .toolbar_table .btns .btn_filter,
-.table_container .content .toolbar_table .btns .btn_relaod {
-    padding: 5px;
-    font-size: 13px;
+  .table_container .content .head_section h4 {
+    margin-bottom: 6px;
   }
   .table_container .content .head_tabel {
     -webkit-box-orient: vertical;
@@ -1071,6 +1115,9 @@ main > .content > .right.scale {
 .add_section form .row {
   padding-bottom: 30px;
   border-bottom: 1px solid #e2e2e2;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .add_section form .row .input_item {
   margin-bottom: 15px;
