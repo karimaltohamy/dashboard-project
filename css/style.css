@@ -28,7 +28,7 @@ ul {
 }
 
 main {
-  min-height: calc(100vh - 67px);
+  min-height: calc(100vh - 80px);
   height: 100%;
 }
 main > .content {
@@ -36,7 +36,7 @@ main > .content {
   display: -ms-flexbox;
   display: flex;
   height: 100%;
-  min-height: calc(100vh - 67px);
+  min-height: calc(100vh - 80px);
 }
 main > .content > .left {
   width: 18%;
@@ -89,6 +89,7 @@ main > .content > .right.scale {
   }
   main > .content > .right {
     width: 100%;
+    padding: 7px 4px;
   }
 }
 @media (max-width: 600px) {
@@ -749,14 +750,90 @@ main > .content > .right.scale {
     font-size: 16px;
   }
 }
+.head_select_table {
+  margin-bottom: 25px;
+  background-color: white;
+  color: #324664;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow: hidden;
+}
+.head_select_table .item {
+  width: 33%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 7px;
+  cursor: pointer;
+  position: relative;
+  padding: 15px;
+}
+.head_select_table .item::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #1362fc;
+  display: none;
+}
+.head_select_table .item.active::before {
+  display: block;
+}
+.head_select_table .item.active span,
+.head_select_table .item.active i {
+  color: #1362fc;
+}
+.head_select_table .item:hover span,
+.head_select_table .item:hover i {
+  color: #1362fc;
+}
+.head_select_table .item span {
+  font-size: 19px;
+  font-weight: 600;
+}
+.head_select_table .item i {
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .head_select_table {
+    margin-bottom: 0px;
+  }
+  .head_select_table .item {
+    padding: 9px 0;
+  }
+  .head_select_table .item span {
+    font-size: 14px;
+  }
+  .head_select_table .item i {
+    font-size: 13px;
+  }
+}
 .table_container {
   height: 100%;
 }
-.table_container.subscribers_table_container, .table_container.unsubscribers_table_container {
+.table_container.subscribers_table_container, .table_container.unsubscribers_table_container, .table_container.rejected_table_container {
   height: auto;
+  display: none;
 }
-.table_container.unsubscribers_table_container {
-  margin-top: 40px;
+.table_container.subscribers_table_container.active, .table_container.unsubscribers_table_container.active, .table_container.rejected_table_container.active {
+  display: block;
 }
 .table_container .content .toolbar_table {
   display: -webkit-box;
@@ -865,7 +942,8 @@ main > .content > .right.scale {
 .table_container .content .head_tabel .info_head_table .btn_filter i {
   font-size: 16px;
 }
-.table_container .content .head_tabel .info_head_table .btn_collage {
+.table_container .content .head_tabel .info_head_table .btn_collage,
+.table_container .content .head_tabel .info_head_table .btn_export {
   background-color: #324664;
   color: white;
   font-weight: 600;
@@ -880,10 +958,13 @@ main > .content > .right.scale {
           align-items: center;
   gap: 5px;
   font-size: 15px;
-  min-width: 140px;
 }
-.table_container .content .head_tabel .info_head_table .btn_collage i {
+.table_container .content .head_tabel .info_head_table .btn_collage i,
+.table_container .content .head_tabel .info_head_table .btn_export i {
   font-size: 15px;
+}
+.table_container .content .head_tabel .info_head_table .btn_collage {
+  min-width: 140px;
 }
 .table_container .content .head_tabel .search_input {
   border: 1px solid #c9cfd6;
@@ -936,6 +1017,10 @@ main > .content > .right.scale {
 .table_container .content table tbody tr {
   background-color: white;
 }
+.table_container .content table tbody tr.select {
+  background-color: #8bbaff;
+  color: white;
+}
 .table_container .content table tbody tr:not(:last-child) {
   border-bottom: 1px solid #e9eaeb;
 }
@@ -946,10 +1031,12 @@ main > .content > .right.scale {
 }
 .table_container .content table tbody tr td:nth-child(1) {
   color: #0d6efd;
-  border-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
-.table_container .content table tbody tr td:last-child {
-  border-radius: 5px;
+.table_container .content table tbody tr td:nth-last-child(2) {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
   color: #ffc368;
 }
 .table_container .content table tbody tr td input[type=checkbox] {
@@ -970,13 +1057,41 @@ main > .content > .right.scale {
   background-color: #ffd4cb;
   color: #ff6746;
 }
-.table_container .content table tbody tr td .btn_accept {
-  background-color: #37d159;
-  color: white;
-  border-radius: 5px;
-  padding: 3px 10px;
+.table_container .content table tbody tr td .btns_actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+}
+.table_container .content table tbody tr td .btn_accept,
+.table_container .content table tbody tr td .btn_remove,
+.table_container .content table tbody tr td .btn_export {
+  background-color: transparent;
   border: none;
-  font-size: 15px;
+}
+.table_container .content table tbody tr td .btn_accept {
+  color: #37d159;
+}
+.table_container .content table tbody tr td .btn_accept i {
+  font-size: 18px;
+}
+.table_container .content table tbody tr td .btn_remove {
+  color: rgb(220, 2, 20);
+}
+.table_container .content table tbody tr td .btn_remove i {
+  font-size: 18px;
+}
+.table_container .content table tbody tr td .btn_export {
+  color: #324664;
+}
+.table_container .content table tbody tr td .btn_export i {
+  font-size: 18px;
 }
 .table_container .content .pagination {
   display: -webkit-box;
@@ -1038,6 +1153,14 @@ main > .content > .right.scale {
     gap: 10px;
     padding: 7px;
   }
+  .table_container .content .head_tabel .btn_add {
+    font-size: 13px;
+    padding: 4px 15px;
+    width: 100%;
+  }
+  .table_container .content .head_tabel .btn_add i {
+    font-size: 13px;
+  }
   .table_container .content .head_tabel .dropdown_operations {
     width: 100%;
   }
@@ -1056,6 +1179,25 @@ main > .content > .right.scale {
   .table_container .content .head_tabel .search_input span {
     padding: 2px 8px;
     font-size: 15px;
+  }
+  .table_container .content .head_tabel .info_head_table {
+    gap: 5px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  .table_container .content .head_tabel .info_head_table button {
+    width: 100% !important;
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+    font-size: 13px !important;
+    padding: 4px 15px !important;
+  }
+  .table_container .content .head_tabel .info_head_table button i {
+    font-size: 13px !important;
   }
   .table_container .content .scroll_table {
     overflow-x: auto;
@@ -1116,14 +1258,13 @@ main > .content > .right.scale {
   padding: 15px;
 }
 .add_section form .row {
-  padding-bottom: 30px;
-  border-bottom: 1px solid #e2e2e2;
+  padding-bottom: 10px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 .add_section form .row .input_item {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 .add_section form .row .input_item label {
   font-weight: 500;
@@ -1154,7 +1295,7 @@ main > .content > .right.scale {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 10px;
+  gap: 5px;
 }
 .add_section form .row .input_switch span {
   font-weight: 500;
@@ -1200,9 +1341,21 @@ main > .content > .right.scale {
 .add_section form .row .input_switch label:active:after {
   width: 130px;
 }
+.add_section form .follow_up_Templates h4,
+.add_section form .follow_up_switchs h4 {
+  font-size: 19px;
+  margin-bottom: 15px;
+}
+.add_section form .follow_up_Templates .follow_up_Templates_row,
+.add_section form .follow_up_switchs .follow_up_Templates_row {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
 .add_section form .btns {
   padding: 15px 0 0;
   text-align: left;
+  border-top: 1px solid #e6e6e6;
 }
 
 @media (max-width: 768px) {
@@ -1223,7 +1376,7 @@ main > .content > .right.scale {
     padding: 7px;
   }
   .add_section form .row {
-    padding-bottom: 10px;
+    padding-bottom: 7px;
   }
   .add_section form .row .input_item {
     margin-bottom: 6px;
@@ -1234,11 +1387,16 @@ main > .content > .right.scale {
   }
   .add_section form .row .input_item input {
     padding: 4px 8px;
-    font-size: 15px;
+    font-size: 13px;
   }
   .add_section form .row .input_item select {
     padding: 4px 2.25rem 4px 0.75rem;
-    font-size: 15px;
+    font-size: 13px;
+  }
+  .add_section form .follow_up_Templates h4,
+.add_section form .follow_up_switchs h4 {
+    font-size: 16px;
+    margin-bottom: 8px;
   }
   .add_section form .btns {
     padding: 6px 0 0;

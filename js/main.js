@@ -24,15 +24,3 @@ items.forEach((item) => {
     document.querySelector(`.list${num}`).classList.toggle("open");
   });
 });
-
-// toggle active check box excle
-const checkExcle = document.querySelector(".check_excle");
-const importFromExcel = document.querySelector(".import_from_excel");
-
-checkExcle.addEventListener("change", (e) => {
-  if (e.target.checked === true) {
-    importFromExcel.classList.add("active");
-  } else {
-    importFromExcel.classList.remove("active");
-  }
-});

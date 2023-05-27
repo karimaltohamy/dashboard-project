@@ -192,10 +192,45 @@
           </div>
         </div>
         <div class="right">
-          <div class="table_container subscribers_table_container">
+          <div class="head_select_table">
+            <div class="item active" data-tableSelect="subscribers">
+              <i class="fa-solid fa-clipboard-check"></i>
+              <span>المشتركين</span>
+            </div>
+            <div class="item" data-tableSelect="unsubscribers">
+              <i class="fa-solid fa-spinner"></i>
+              <span>الغير مشتركين</span>
+            </div>
+            <div class="item" data-tableSelect="rejected">
+              <i class="fa-solid fa-ban"></i>
+              <span>المرفوضين</span>
+            </div>
+          </div>
+
+          <div
+            class="table_container subscribers_table_container active table_select"
+          >
             <div class="content">
-              <div class="head_section">
-                <h4>المشتركين</h4>
+              <div class="head_tabel">
+                <button class="btn_add">
+                  <i class="fa-solid fa-plus"></i>
+                  اضافه مجموعه
+                </button>
+
+                <div class="info_head_table">
+                  <div class="search_input">
+                    <input type="text" placeholder="ابحث" />
+                    <span>
+                      <i class="fa-solid fa-magnifying-glass"></i>
+                    </span>
+                  </div>
+                  <button class="btn_filter">
+                    <i class="fa-solid fa-filter"></i> فلتر
+                  </button>
+                  <button class="btn_export">
+                    <i class="fa-solid fa-cloud-arrow-down"></i> تصدير
+                  </button>
+                </div>
               </div>
 
               <div class="scroll_table">
@@ -210,6 +245,7 @@
                       <th>رقم الهاتف</th>
                       <th>طريقه الحضور</th>
                       <th>معاد الكورس</th>
+                      <th>أجراءات</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -227,6 +263,16 @@
                       <td>0108580609</td>
                       <td>online</td>
                       <td>2023-04-27 14:58:14</td>
+                      <td>
+                        <div class="btns_actions">
+                          <button class="btn_remove">
+                            <i class="fa-solid fa-trash-can"></i>
+                          </button>
+                          <button class="btn_export">
+                            <i class="fa-solid fa-cloud-arrow-down"></i>
+                          </button>
+                        </div>
+                      </td>
                     </tr>
                     <tr>
                       <td>
@@ -242,6 +288,16 @@
                       <td>0108580609</td>
                       <td>online</td>
                       <td>2023-04-27 14:58:14</td>
+                      <td>
+                        <div class="btns_actions">
+                          <button class="btn_remove">
+                            <i class="fa-solid fa-trash-can"></i>
+                          </button>
+                          <button class="btn_export">
+                            <i class="fa-solid fa-cloud-arrow-down"></i>
+                          </button>
+                        </div>
+                      </td>
                     </tr>
                     <tr>
                       <td>
@@ -257,6 +313,116 @@
                       <td>0108580609</td>
                       <td>online</td>
                       <td>2023-04-27 14:58:14</td>
+                      <td>
+                        <div class="btns_actions">
+                          <button class="btn_remove">
+                            <i class="fa-solid fa-trash-can"></i>
+                          </button>
+                          <button class="btn_export">
+                            <i class="fa-solid fa-cloud-arrow-down"></i>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input
+                          type="checkbox"
+                          name="checkboxCourse"
+                          class="checkboxCourse"
+                          id="checkboxItem1"
+                        />
+                      </td>
+                      <td>احمد حسن</td>
+                      <td>180</td>
+                      <td>0108580609</td>
+                      <td>online</td>
+                      <td>2023-04-27 14:58:14</td>
+                      <td>
+                        <div class="btns_actions">
+                          <button class="btn_remove">
+                            <i class="fa-solid fa-trash-can"></i>
+                          </button>
+                          <button class="btn_export">
+                            <i class="fa-solid fa-cloud-arrow-down"></i>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input
+                          type="checkbox"
+                          name="checkboxCourse"
+                          class="checkboxCourse"
+                          id="checkboxItem1"
+                        />
+                      </td>
+                      <td>احمد حسن</td>
+                      <td>180</td>
+                      <td>0108580609</td>
+                      <td>online</td>
+                      <td>2023-04-27 14:58:14</td>
+                      <td>
+                        <div class="btns_actions">
+                          <button class="btn_remove">
+                            <i class="fa-solid fa-trash-can"></i>
+                          </button>
+                          <button class="btn_export">
+                            <i class="fa-solid fa-cloud-arrow-down"></i>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input
+                          type="checkbox"
+                          name="checkboxCourse"
+                          class="checkboxCourse"
+                          id="checkboxItem1"
+                        />
+                      </td>
+                      <td>احمد حسن</td>
+                      <td>180</td>
+                      <td>0108580609</td>
+                      <td>online</td>
+                      <td>2023-04-27 14:58:14</td>
+                      <td>
+                        <div class="btns_actions">
+                          <button class="btn_remove">
+                            <i class="fa-solid fa-trash-can"></i>
+                          </button>
+                          <button class="btn_export">
+                            <i class="fa-solid fa-cloud-arrow-down"></i>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input
+                          type="checkbox"
+                          name="checkboxCourse"
+                          class="checkboxCourse"
+                          id="checkboxItem1"
+                        />
+                      </td>
+                      <td>احمد حسن</td>
+                      <td>180</td>
+                      <td>0108580609</td>
+                      <td>online</td>
+                      <td>2023-04-27 14:58:14</td>
+                      <td>
+                        <div class="btns_actions">
+                          <button class="btn_remove">
+                            <i class="fa-solid fa-trash-can"></i>
+                          </button>
+                          <button class="btn_export">
+                            <i class="fa-solid fa-cloud-arrow-down"></i>
+                          </button>
+                        </div>
+                      </td>
                     </tr>
                   </tbody>
                 </table>
@@ -274,10 +440,30 @@
             </div>
           </div>
 
-          <div class="table_container unsubscribers_table_container">
+          <div
+            class="table_container unsubscribers_table_container table_select"
+          >
             <div class="content">
-              <div class="head_section">
-                <h4>الغير مشتركين</h4>
+              <div class="head_tabel">
+                <button class="btn_add">
+                  <i class="fa-solid fa-plus"></i>
+                  اضافه مجموعه
+                </button>
+
+                <div class="info_head_table">
+                  <div class="search_input">
+                    <input type="text" placeholder="ابحث" />
+                    <span>
+                      <i class="fa-solid fa-magnifying-glass"></i>
+                    </span>
+                  </div>
+                  <button class="btn_filter">
+                    <i class="fa-solid fa-filter"></i> فلتر
+                  </button>
+                  <button class="btn_export">
+                    <i class="fa-solid fa-cloud-arrow-down"></i> تصدير
+                  </button>
+                </div>
               </div>
 
               <div class="scroll_table">
@@ -309,7 +495,17 @@
                       <td>جامعه دمنهور</td>
                       <td>0100895795</td>
                       <td>
-                        <button class="btn_accept">قبول</button>
+                        <div class="btns_actions">
+                          <button class="btn_accept">
+                            <i class="fa-solid fa-circle-check"></i>
+                          </button>
+                          <button class="btn_remove">
+                            <i class="fa-solid fa-trash-can"></i>
+                          </button>
+                          <button class="btn_export">
+                            <i class="fa-solid fa-cloud-arrow-down"></i>
+                          </button>
+                        </div>
                       </td>
                     </tr>
                     <tr>
@@ -326,7 +522,17 @@
                       <td>جامعه دمنهور</td>
                       <td>0100895795</td>
                       <td>
-                        <button class="btn_accept">قبول</button>
+                        <div class="btns_actions">
+                          <button class="btn_accept">
+                            <i class="fa-solid fa-circle-check"></i>
+                          </button>
+                          <button class="btn_remove">
+                            <i class="fa-solid fa-trash-can"></i>
+                          </button>
+                          <button class="btn_export">
+                            <i class="fa-solid fa-cloud-arrow-down"></i>
+                          </button>
+                        </div>
                       </td>
                     </tr>
                     <tr>
@@ -343,7 +549,144 @@
                       <td>جامعه دمنهور</td>
                       <td>0100895795</td>
                       <td>
-                        <button class="btn_accept">قبول</button>
+                        <div class="btns_actions">
+                          <button class="btn_accept">
+                            <i class="fa-solid fa-circle-check"></i>
+                          </button>
+                          <button class="btn_remove">
+                            <i class="fa-solid fa-trash-can"></i>
+                          </button>
+                          <button class="btn_export">
+                            <i class="fa-solid fa-cloud-arrow-down"></i>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="pagination">
+                <div class="btns">
+                  <button><i class="fa-solid fa-angle-right"></i></button>
+                  <button class="active">1</button>
+                  <button>2</button>
+                  <button><i class="fa-solid fa-angle-left"></i></button>
+                </div>
+                <p>Showing <span>1</span> to <span>10</span> of 20 entries</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="table_container rejected_table_container table_select">
+            <div class="content">
+              <div class="head_tabel">
+                <button class="btn_add">
+                  <i class="fa-solid fa-plus"></i>
+                  اضافه مجموعه
+                </button>
+
+                <div class="info_head_table">
+                  <div class="search_input">
+                    <input type="text" placeholder="ابحث" />
+                    <span>
+                      <i class="fa-solid fa-magnifying-glass"></i>
+                    </span>
+                  </div>
+                  <button class="btn_filter">
+                    <i class="fa-solid fa-filter"></i> فلتر
+                  </button>
+                  <button class="btn_export">
+                    <i class="fa-solid fa-cloud-arrow-down"></i> تصدير
+                  </button>
+                </div>
+              </div>
+
+              <div class="scroll_table">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>
+                        <input type="checkbox" id="select_all2" />
+                      </th>
+                      <th>اسم الطالب</th>
+                      <th>اسم الكليه</th>
+                      <th>اسم الجامعه</th>
+                      <th>رقم الموبيل</th>
+                      <th>أجراءات</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <input
+                          type="checkbox"
+                          name="checkboxCourse"
+                          class="checkboxCourse2"
+                          id="checkboxItem1"
+                        />
+                      </td>
+                      <td>احمد حسن</td>
+                      <td>كليه التجاره</td>
+                      <td>جامعه دمنهور</td>
+                      <td>0100895795</td>
+                      <td>
+                        <div class="btns_actions">
+                          <button class="btn_remove">
+                            <i class="fa-solid fa-trash-can"></i>
+                          </button>
+                          <button class="btn_export">
+                            <i class="fa-solid fa-cloud-arrow-down"></i>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input
+                          type="checkbox"
+                          name="checkboxCourse"
+                          class="checkboxCourse2"
+                          id="checkboxItem1"
+                        />
+                      </td>
+                      <td>احمد حسن</td>
+                      <td>كليه التجاره</td>
+                      <td>جامعه دمنهور</td>
+                      <td>0100895795</td>
+                      <td>
+                        <div class="btns_actions">
+                          <button class="btn_remove">
+                            <i class="fa-solid fa-trash-can"></i>
+                          </button>
+                          <button class="btn_export">
+                            <i class="fa-solid fa-cloud-arrow-down"></i>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input
+                          type="checkbox"
+                          name="checkboxCourse"
+                          class="checkboxCourse2"
+                          id="checkboxItem1"
+                        />
+                      </td>
+                      <td>احمد حسن</td>
+                      <td>كليه التجاره</td>
+                      <td>جامعه دمنهور</td>
+                      <td>0100895795</td>
+                      <td>
+                        <div class="btns_actions">
+                          <button class="btn_remove">
+                            <i class="fa-solid fa-trash-can"></i>
+                          </button>
+                          <button class="btn_export">
+                            <i class="fa-solid fa-cloud-arrow-down"></i>
+                          </button>
+                        </div>
                       </td>
                     </tr>
                   </tbody>
@@ -390,6 +733,40 @@
             item.checked = true;
           } else {
             item.checked = false;
+          }
+        });
+      });
+
+      // head select table
+      const itemsSelectHead = document.querySelectorAll(
+        ".head_select_table .item"
+      );
+      const subscribersTable = document.querySelector(
+        ".subscribers_table_container"
+      );
+      const unsubscribersTable = document.querySelector(
+        ".unsubscribers_table_container"
+      );
+      const rejectedTable = document.querySelector(".rejected_table_container");
+      const tablesSelect = document.querySelectorAll(".table_select");
+
+      itemsSelectHead.forEach((item) => {
+        item.addEventListener("click", () => {
+          itemsSelectHead.forEach((ele) => ele.classList.remove("active"));
+          item.classList.add("active");
+
+          tablesSelect.forEach((ele) => ele.classList.remove("active"));
+
+          if (item.getAttribute("data-tableSelect") === "subscribers") {
+            subscribersTable.classList.add("active");
+          } else if (
+            item.getAttribute("data-tableSelect") === "unsubscribers"
+          ) {
+            unsubscribersTable.classList.add("active");
+          } else if (item.getAttribute("data-tableSelect") === "rejected") {
+            rejectedTable.classList.add("active");
+          } else {
+            return null;
           }
         });
       });

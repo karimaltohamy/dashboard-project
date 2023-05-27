@@ -240,5 +240,18 @@
     <!-- end main -->
 
     <script src="js/main.js"></script>
+    <script>
+      // toggle active check box excle
+      const checkExcle = document.querySelector(".check_excle");
+      const importFromExcel = document.querySelector(".import_from_excel");
+
+      checkExcle.addEventListener("change", (e) => {
+        if (e.target.checked === true) {
+          importFromExcel.classList.add("active");
+        } else {
+          importFromExcel.classList.remove("active");
+        }
+      });
+    </script>
   </body>
 </html>

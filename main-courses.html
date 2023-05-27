@@ -112,7 +112,7 @@
                 <div href="clients.html" class="item item_list" data-num="1">
                   <i class="fa-solid fa-angle-down arrow"></i>
                   <i class="fa-solid fa-user-group"></i>
-                  <span>العملاء</span>
+                  <span>الطلاب</span>
                 </div>
 
                 <ul class="list list1">
@@ -212,6 +212,14 @@
                     <i class="fa-solid fa-building-columns"></i>
                     اضافه جامعه
                   </button>
+
+                  <button class="btn_filter">
+                    <i class="fa-solid fa-filter"></i> فلتر
+                  </button>
+
+                  <button class="btn_export">
+                    <i class="fa-solid fa-cloud-arrow-down"></i> تصدير
+                  </button>
                 </div>
               </div>
 
@@ -227,6 +235,7 @@
                       <th>الاجمالي</th>
                       <th>المقدم</th>
                       <th>تاريخ الانشاء</th>
+                      <th>أجراءات</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -248,6 +257,16 @@
                       <td>550</td>
                       <td>200</td>
                       <td>2023-04-27 14:58:14</td>
+                      <td>
+                        <div class="btns_actions">
+                          <button class="btn_remove">
+                            <i class="fa-solid fa-trash-can"></i>
+                          </button>
+                          <button class="btn_export">
+                            <i class="fa-solid fa-cloud-arrow-down"></i>
+                          </button>
+                        </div>
+                      </td>
                     </tr>
                     <tr>
                       <td>
@@ -255,11 +274,11 @@
                           type="checkbox"
                           name="checkboxCourse"
                           class="checkboxCourse"
-                          id="checkboxItem2"
+                          id="checkboxItem1"
                         />
                       </td>
                       <td>
-                        <a href="profile-course.html">
+                        <a href="student-main-course.html">
                           Learn Figma - UI/UX Design Essential Training
                         </a>
                       </td>
@@ -267,6 +286,45 @@
                       <td>550</td>
                       <td>200</td>
                       <td>2023-04-27 14:58:14</td>
+                      <td>
+                        <div class="btns_actions">
+                          <button class="btn_remove">
+                            <i class="fa-solid fa-trash-can"></i>
+                          </button>
+                          <button class="btn_export">
+                            <i class="fa-solid fa-cloud-arrow-down"></i>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input
+                          type="checkbox"
+                          name="checkboxCourse"
+                          class="checkboxCourse"
+                          id="checkboxItem1"
+                        />
+                      </td>
+                      <td>
+                        <a href="student-main-course.html">
+                          Learn Figma - UI/UX Design Essential Training
+                        </a>
+                      </td>
+                      <td>محمد احمد</td>
+                      <td>550</td>
+                      <td>200</td>
+                      <td>2023-04-27 14:58:14</td>
+                      <td>
+                        <div class="btns_actions">
+                          <button class="btn_remove">
+                            <i class="fa-solid fa-trash-can"></i>
+                          </button>
+                          <button class="btn_export">
+                            <i class="fa-solid fa-cloud-arrow-down"></i>
+                          </button>
+                        </div>
+                      </td>
                     </tr>
                   </tbody>
                 </table>
@@ -388,8 +446,34 @@
     </div>
     <!-- end popup add collage -->
 
+    <!-- start popup filter -->
+    <div class="popup_filter">
+      <div class="head">
+        <h3>فلتر</h3>
+        <i class="fa-solid fa-xmark close_popup_filter"></i>
+      </div>
+
+      <form action="">
+        <div class="input_item">
+          <label for="">اسم الكورس </label>
+          <input type="text" placeholder="اسم الكورس" />
+        </div>
+        <div class="input_item">
+          <label for=""> من</label>
+          <input type="date" placeholder="" />
+        </div>
+        <div class="input_item">
+          <label for=""> الي</label>
+          <input type="date" placeholder="" />
+        </div>
+        <button class="btn_add">filter</button>
+      </form>
+    </div>
+    <!-- end popup filter -->
+
     <script src="js/main.js"></script>
     <script src="js/handle-popup.js"></script>
+    <script src="js/select-table.js"></script>
     <script>
       // popup add collage in courses page
       const popupCollage = document.querySelector(".popup_collage");
@@ -404,20 +488,6 @@
       btnCloseCollage.addEventListener("click", () => {
         popupCollage.classList.remove("active");
         overflow.classList.remove("active");
-      });
-
-      //   checkbox select
-      const selectAll = document.querySelector("#select_all");
-      const checkboxsCourses = document.querySelectorAll(".checkboxCourse");
-
-      selectAll.addEventListener("click", () => {
-        checkboxsCourses.forEach((item) => {
-          if (selectAll.checked === true) {
-            item.checked = true;
-          } else {
-            item.checked = false;
-          }
-        });
       });
     </script>
   </body>
