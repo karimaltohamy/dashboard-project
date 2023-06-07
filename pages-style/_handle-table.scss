@@ -192,8 +192,33 @@ $dark-text: #324664;
           }
         }
 
+        .input_import {
+          label {
+            background-color: $dark-text;
+            color: white;
+            font-weight: 600;
+            padding: 6px 20px;
+            border-radius: 4px;
+            border: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 15px;
+            cursor: pointer;
+
+            i {
+              font-size: 15px;
+            }
+          }
+
+          input {
+            display: none;
+          }
+        }
+
         .btn_collage,
-        .btn_export {
+        .btn_export,
+        .btn_import {
           background-color: $dark-text;
           color: white;
           font-weight: 600;

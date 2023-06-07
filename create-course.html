@@ -127,10 +127,6 @@
                     <span></span>
                     <a href="clients.html">الطلاب</a>
                   </li>
-                  <li>
-                    <span></span>
-                    <a href="import-from-excel.html">استيراد من اكسيل</a>
-                  </li>
                 </ul>
               </div>
 
@@ -144,21 +140,21 @@
                 <div class="item item_list" data-num="2">
                   <i class="fa-solid fa-angle-down arrow"></i>
                   <i class="fa-solid fa-graduation-cap"></i>
-                  <span>الكورسات</span>
+                  <span>التدريب</span>
                 </div>
 
                 <ul class="list list2">
                   <li>
                     <span></span>
-                    <a href="courses-landing.html">كورسات الموقع</a>
+                    <a href="courses-landing.html"> تدريبات الموقع</a>
                   </li>
                   <li>
                     <span></span>
-                    <a href="main-courses.html">جميع الكورسات</a>
+                    <a href="main-courses.html">جميع التدريب</a>
                   </li>
                   <li>
                     <span></span>
-                    <a href="create-course.html">انشاء كورس</a>
+                    <a href="create-course.html">انشاء تدريب</a>
                   </li>
                 </ul>
               </div>
@@ -202,14 +198,14 @@
             <div class="head">
               <h3>
                 <i class="fa-solid fa-plus"></i>
-                انشاء كورس
+                انشاء تدريب
               </h3>
             </div>
             <form action="">
               <div class="row main_inputs">
                 <div class="col-12 col-md-3">
                   <div class="input_item">
-                    <label for="">اسم الكورس</label>
+                    <label for="">اسم ال تدريب</label>
                     <input
                       type="text"
                       class="form-control"
@@ -357,9 +353,20 @@
                 </div>
                 <div class="col-12 col-md-3">
                   <div class="input_item">
-                    <label for="">رابط الكورس</label>
+                    <label for="">رابط ال تدريب</label>
                     <input
                       type="text"
+                      class="form-control"
+                      aria-label="Username"
+                      aria-describedby="basic-addon1"
+                    />
+                  </div>
+                </div>
+                <div class="col-12 col-md-3">
+                  <div class="input_item">
+                    <label for="">عدد Revive</label>
+                    <input
+                      type="number"
                       class="form-control"
                       aria-label="Username"
                       aria-describedby="basic-addon1"
@@ -436,6 +443,19 @@
                       </select>
                     </div>
                   </div>
+                  <div class="col-12 col-md-2">
+                    <div class="input_item">
+                      <label for="">Revive</label>
+                      <select
+                        class="form-select"
+                        aria-label="Default select example"
+                      >
+                        <option value="" selected>تحديد اسم القالب</option>
+                        <option value="">قالب 1</option>
+                        <option value="">قالب 2</option>
+                      </select>
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -454,14 +474,6 @@
                     <div class="input_switch">
                       <span>المقدم</span>
                       <input type="checkbox" id="switch2" /><label for="switch2"
-                        >Toggle</label
-                      >
-                    </div>
-                  </div>
-                  <div class="col-6 col-md-2">
-                    <div class="input_switch">
-                      <span>الباقي</span>
-                      <input type="checkbox" id="switch3" /><label for="switch3"
                         >Toggle</label
                       >
                     </div>

@@ -8,16 +8,12 @@
     <link rel="stylesheet" href="css/style.css" />
     <!-- boostrap -->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-      crossorigin="anonymous"
-    ></script>
+
     <!-- font awesome -->
     <link
       rel="stylesheet"
@@ -124,10 +120,6 @@
                     <span></span>
                     <a href="clients.html">الطلاب</a>
                   </li>
-                  <li>
-                    <span></span>
-                    <a href="import-from-excel.html">استيراد من اكسيل</a>
-                  </li>
                 </ul>
               </div>
 
@@ -142,21 +134,21 @@
                 <div class="item item_list" data-num="2">
                   <i class="fa-solid fa-angle-down arrow"></i>
                   <i class="fa-solid fa-graduation-cap"></i>
-                  <span>الكورسات</span>
+                  <span>التدريب</span>
                 </div>
 
                 <ul class="list list2">
                   <li>
                     <span></span>
-                    <a href="courses-landing.html">كورسات الموقع</a>
+                    <a href="courses-landing.html"> تدريبات الموقع</a>
                   </li>
                   <li>
                     <span></span>
-                    <a href="main-courses.html">جميع الكورسات</a>
+                    <a href="main-courses.html">جميع التدريب</a>
                   </li>
                   <li>
                     <span></span>
-                    <a href="create-course.html">انشاء كورس</a>
+                    <a href="create-course.html">انشاء تدريب</a>
                   </li>
                 </ul>
               </div>
@@ -213,6 +205,21 @@
                   <h4>info@example.com</h4>
                   <span>الايميل</span>
                 </div>
+                <div class="inputs_switch">
+                  <div class="input_switch">
+                    <span>لينكات المتابعه</span>
+                    <input type="checkbox" id="switch_links" /><label
+                      for="switch_links"
+                      >Toggle</label
+                    >
+                  </div>
+                  <div class="input_switch">
+                    <span>الباقي</span>
+                    <input type="checkbox" id="switch3" /><label for="switch3"
+                      >Toggle</label
+                    >
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -232,6 +239,10 @@
                           <span>محمود احمد</span>
                         </div>
                         <div class="item">
+                          <h6 class="title">الاسم بالانجليزيه :</h6>
+                          <span>mahmoud ahmed</span>
+                        </div>
+                        <div class="item">
                           <h6 class="title">الايميل :</h6>
                           <span>info@example.com</span>
                         </div>
@@ -243,15 +254,19 @@
                           <h6 class="title">رقم الموبيل:</h6>
                           <span>01085987978</span>
                         </div>
-                      </div>
-                      <div class="col-12 col-md-6">
                         <div class="item">
                           <h6 class="title">العنوان :</h6>
                           <span>مصر,البحيره</span>
                         </div>
+                      </div>
+                      <div class="col-12 col-md-6">
                         <div class="item">
                           <h6 class="title">الجامعه:</h6>
                           <span>جامعه القاهره</span>
+                        </div>
+                        <div class="item">
+                          <h6 class="title">الكليه:</h6>
+                          <span>تجاره</span>
                         </div>
                         <div class="item">
                           <h6 class="title">الفرقه الدراسيه:</h6>
@@ -259,7 +274,11 @@
                         </div>
                         <div class="item">
                           <h6 class="title">الشهاده :</h6>
-                          <span>عند انتهاء الكورس</span>
+                          <span>عند انتهاء ال تدريب</span>
+                        </div>
+                        <div class="item">
+                          <h6 class="title">تاريخ التسجيل علي السستم :</h6>
+                          <span> 2023-04-27</span>
                         </div>
                       </div>
                     </div>
@@ -269,10 +288,15 @@
               <div class="right">
                 <div class="follow_up_links">
                   <div class="head_links">
-                    <h4>لينكات لمتابعه</h4>
+                    <h4 class="btn_select_table active" data-table="follow">
+                      لينكات لمتابعه
+                    </h4>
+                    <h4 class="btn_select_table" data-table="fawri">
+                      اكواد فوري
+                    </h4>
                   </div>
 
-                  <div class="table_links">
+                  <div class="table_links table_links_follow active">
                     <table>
                       <thead>
                         <tr>
@@ -285,22 +309,68 @@
                         <tr>
                           <td>واتساب</td>
                           <td>https://web.whatsapp.com/</td>
-                          <td>2023-04-27 14:58:14</td>
+                          <td>2023-04-27</td>
                         </tr>
                         <tr>
                           <td>sms</td>
                           <td>https://web.whatsapp.com/</td>
-                          <td>2023-04-27 14:58:14</td>
+                          <td>2023-04-27</td>
                         </tr>
                         <tr>
                           <td>واتساب</td>
                           <td>https://web.whatsapp.com/</td>
-                          <td>2023-04-27 14:58:14</td>
+                          <td>2023-04-27</td>
                         </tr>
                         <tr>
                           <td>sms</td>
                           <td>https://web.whatsapp.com/</td>
-                          <td>2023-04-27 14:58:14</td>
+                          <td>2023-04-27</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="table_links table_links_fawri">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>اسم المنصه</th>
+                          <th>الكود</th>
+                          <th>اللينك</th>
+                          <th>التاريخ</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>واتساب</td>
+                          <td>45273</td>
+                          <td>
+                            <a href="#">https://web.whatsapp.com/</a>
+                          </td>
+                          <td>2023-04-27</td>
+                        </tr>
+                        <tr>
+                          <td>sms</td>
+                          <td>45273</td>
+                          <td>
+                            <a href="#">https://web.whatsapp.com/</a>
+                          </td>
+                          <td>2023-04-27</td>
+                        </tr>
+                        <tr>
+                          <td>واتساب</td>
+                          <td>45273</td>
+                          <td>
+                            <a href="#">https://web.whatsapp.com/</a>
+                          </td>
+                          <td>2023-04-27</td>
+                        </tr>
+                        <tr>
+                          <td>sms</td>
+                          <td>45273</td>
+                          <td>
+                            <a href="#">https://web.whatsapp.com/</a>
+                          </td>
+                          <td>2023-04-27</td>
                         </tr>
                       </tbody>
                     </table>
@@ -310,19 +380,22 @@
             </div>
             <div class="courses_student">
               <div class="head_courses">
-                <h4>عن الكورسات</h4>
+                <h4>عن التدريب</h4>
               </div>
               <div class="table_courses">
                 <table>
                   <thead>
                     <tr>
-                      <th>اسم الكورس</th>
+                      <th>اسم ال تدريب</th>
                       <th>المعاد</th>
                       <th>طريقه الحضور</th>
                       <th>المبلغ المدفوع</th>
                       <th>المبلغ المتبقي</th>
                       <th>الحاله</th>
                       <th>تاريخ الدفع الاول</th>
+                      <th>تاريخ الدفع التاني</th>
+                      <th>تاريخ الدفع الثالث</th>
+                      <th>أجراءات</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -335,29 +408,65 @@
                       <td>
                         <span class="contact active">مشترك</span>
                       </td>
-                      <td>2023-04-27 14:58:14</td>
+                      <td>2023-04-27</td>
+                      <td>2023-04-27</td>
+                      <td>2023-04-27</td>
+                      <td>
+                        <div class="btns_actions">
+                          <button class="btn_remove">
+                            <i class="fa-solid fa-trash-can"></i>
+                          </button>
+                          <button class="btn_edite btn_add">
+                            <i class="fa-regular fa-pen-to-square"></i>
+                          </button>
+                        </div>
+                      </td>
                     </tr>
                     <tr>
-                      <td>Food Production training</td>
+                      <td>Vaccines Industry</td>
                       <td>2023-04-27</td>
-                      <td>online</td>
+                      <td>offline</td>
                       <td>100</td>
                       <td>250</td>
                       <td>
                         <span class="contact active">مشترك</span>
                       </td>
-                      <td>2023-04-27 14:58:14</td>
+                      <td>2023-04-27</td>
+                      <td>2023-04-27</td>
+                      <td>2023-04-27</td>
+                      <td>
+                        <div class="btns_actions">
+                          <button class="btn_remove">
+                            <i class="fa-solid fa-trash-can"></i>
+                          </button>
+                          <button class="btn_edite btn_add">
+                            <i class="fa-regular fa-pen-to-square"></i>
+                          </button>
+                        </div>
+                      </td>
                     </tr>
                     <tr>
-                      <td>Cytogenetics Training</td>
+                      <td>Vaccines Industry</td>
                       <td>2023-04-27</td>
-                      <td>online</td>
+                      <td>blendate</td>
                       <td>100</td>
                       <td>250</td>
                       <td>
-                        <span class="contact offline">غير مشترك </span>
+                        <span class="contact active">مشترك</span>
                       </td>
-                      <td>2023-04-27 14:58:14</td>
+                      <td>2023-04-27</td>
+                      <td>2023-04-27</td>
+                      <td>2023-04-27</td>
+                      <td>
+                        <div class="btns_actions">
+                          <button class="btn_remove">
+                            <i class="fa-solid fa-trash-can"></i>
+                          </button>
+                          <button class="btn_edite btn_add">
+                            <i class="fa-regular fa-pen-to-square"></i>
+                          </button>
+                        </div>
+                      </td>
                     </tr>
                   </tbody>
                 </table>
@@ -369,6 +478,131 @@
     </main>
     <!-- end main -->
 
+    <!-- start popup add client -->
+    <div class="overflow"></div>
+    <div class="add_courses add_popup">
+      <div class="head">
+        <h3>
+          <span><i class="fa-solid fa-school"></i></span> تعديل التدريب
+        </h3>
+        <i class="fa-solid fa-xmark close_popup"></i>
+      </div>
+
+      <form action="">
+        <div class="row">
+          <div class="col-6">
+            <div class="input_item">
+              <label for=""> اسم ال تدريب</label>
+              <input type="text" placeholder="اسم ال تدريب" />
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="input_item">
+              <label for=""> المعاد</label>
+              <input type="date" />
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="input_item">
+              <label for=""> طريقه الحضور</label>
+              <select>
+                <option value="">online</option>
+                <option value="">offline</option>
+                <option value="">blendate</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="input_item">
+              <label for=""> المبلغ المدفوع</label>
+              <input type="number" placeholder="المبلغ المدفوع" />
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="input_item">
+              <label for=""> المبلغ المتبقي</label>
+              <input type="number" placeholder="المبلغ المتبقي" />
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="input_item">
+              <label for=""> الحاله</label>
+              <select>
+                <option value="">متشرك</option>
+                <option value="">غير المشترك</option>
+                <option value="">مرفوض</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="input_item">
+              <label for="">تاريخ الدفع الاول</label>
+              <input type="date" />
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="input_item">
+              <label for="">تاريخ الدفع التاني</label>
+              <input type="date" />
+            </div>
+          </div>
+        </div>
+
+        <div class="input_item">
+          <label for="">تاريخ الدفع الثالث</label>
+          <input type="date" />
+        </div>
+
+        <button class="btn_add">Edite <i class="fa-solid fa-plus"></i></button>
+      </form>
+    </div>
+    <!-- end popup add client -->
+
+    <!-- bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
     <script src="js/main.js"></script>
+    <script>
+      // select item table
+      const btnSelectTable = document.querySelectorAll(".btn_select_table");
+      const tableLinksFollow = document.querySelector(".table_links_follow");
+      const tableLinksFawri = document.querySelector(".table_links_fawri");
+
+      btnSelectTable.forEach((item) => {
+        item.addEventListener("click", () => {
+          btnSelectTable.forEach((ele) => ele.classList.remove("active"));
+          if (item.getAttribute("data-table") === "follow") {
+            item.classList.add("active");
+            tableLinksFollow.classList.add("active");
+            tableLinksFawri.classList.remove("active");
+          } else if (item.getAttribute("data-table") === "fawri") {
+            item.classList.add("active");
+            tableLinksFollow.classList.remove("active");
+            tableLinksFawri.classList.add("active");
+          }
+        });
+      });
+
+      // open popup edite
+      const btnsOpen = document.querySelectorAll(".btn_add");
+      const popup = document.querySelector(".add_popup");
+      const overflow = document.querySelector(".overflow");
+      const btnClose = document.querySelector(".close_popup");
+
+      btnsOpen.forEach((item) => {
+        item.addEventListener("click", () => {
+          popup.classList.add("active");
+          overflow.classList.add("active");
+        });
+      });
+
+      btnClose.addEventListener("click", () => {
+        popup.classList.remove("active");
+        overflow.classList.remove("active");
+      });
+    </script>
   </body>
 </html>

@@ -942,8 +942,32 @@ main > .content > .right.scale {
 .table_container .content .head_tabel .info_head_table .btn_filter i {
   font-size: 16px;
 }
+.table_container .content .head_tabel .info_head_table .input_import label {
+  background-color: #324664;
+  color: white;
+  font-weight: 600;
+  padding: 6px 20px;
+  border-radius: 4px;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+  font-size: 15px;
+  cursor: pointer;
+}
+.table_container .content .head_tabel .info_head_table .input_import label i {
+  font-size: 15px;
+}
+.table_container .content .head_tabel .info_head_table .input_import input {
+  display: none;
+}
 .table_container .content .head_tabel .info_head_table .btn_collage,
-.table_container .content .head_tabel .info_head_table .btn_export {
+.table_container .content .head_tabel .info_head_table .btn_export,
+.table_container .content .head_tabel .info_head_table .btn_import {
   background-color: #324664;
   color: white;
   font-weight: 600;
@@ -960,7 +984,8 @@ main > .content > .right.scale {
   font-size: 15px;
 }
 .table_container .content .head_tabel .info_head_table .btn_collage i,
-.table_container .content .head_tabel .info_head_table .btn_export i {
+.table_container .content .head_tabel .info_head_table .btn_export i,
+.table_container .content .head_tabel .info_head_table .btn_import i {
   font-size: 15px;
 }
 .table_container .content .head_tabel .info_head_table .btn_collage {
@@ -1961,6 +1986,9 @@ main > .content > .right.scale {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: self-start;
+      -ms-flex-align: self-start;
+          align-items: self-start;
   gap: 25px;
   padding-right: 20px;
 }
@@ -1981,6 +2009,67 @@ main > .content > .right.scale {
 .content_profile_student .head_profile_student .main_details .text span {
   color: gray;
   font-size: 15px;
+}
+.content_profile_student .head_profile_student .main_details .inputs_switch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+.content_profile_student .head_profile_student .main_details .inputs_switch .input_switch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+}
+.content_profile_student .head_profile_student .main_details .inputs_switch .input_switch span {
+  color: #324664;
+  font-weight: 600;
+}
+.content_profile_student .head_profile_student .main_details .inputs_switch .input_switch input[type=checkbox] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+.content_profile_student .head_profile_student .main_details .inputs_switch .input_switch label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 45px;
+  height: 18px;
+  background: grey;
+  display: block;
+  border-radius: 100px;
+  position: relative;
+}
+.content_profile_student .head_profile_student .main_details .inputs_switch .input_switch label:after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 5px;
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  border-radius: 90px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.content_profile_student .head_profile_student .main_details .inputs_switch .input_switch input:checked + label {
+  background: #bada55;
+}
+.content_profile_student .head_profile_student .main_details .inputs_switch .input_switch input:checked + label:after {
+  left: calc(100% - 5px);
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+.content_profile_student .head_profile_student .main_details .inputs_switch .input_switch label:active:after {
+  width: 130px;
 }
 .content_profile_student .line {
   display: -webkit-box;
@@ -2073,16 +2162,12 @@ main > .content > .right.scale {
           box-shadow: 0rem 0.3125rem 0.3125rem 0rem rgba(82, 63, 105, 0.05);
   border-radius: 15px;
 }
-.content_profile_student .follow_up_links .head_links,
 .content_profile_student .follow_up_links .head_courses,
-.content_profile_student .courses_student .head_links,
 .content_profile_student .courses_student .head_courses {
   border-bottom: 1px solid rgb(210, 210, 210);
   padding: 10px 20px;
 }
-.content_profile_student .follow_up_links .head_links h4,
 .content_profile_student .follow_up_links .head_courses h4,
-.content_profile_student .courses_student .head_links h4,
 .content_profile_student .courses_student .head_courses h4 {
   color: #1362fc;
   position: relative;
@@ -2091,9 +2176,7 @@ main > .content > .right.scale {
   width: fit-content;
   margin-bottom: 0;
 }
-.content_profile_student .follow_up_links .head_links h4::before,
 .content_profile_student .follow_up_links .head_courses h4::before,
-.content_profile_student .courses_student .head_links h4::before,
 .content_profile_student .courses_student .head_courses h4::before {
   content: "";
   position: absolute;
@@ -2204,6 +2287,96 @@ main > .content > .right.scale {
 .content_profile_student .courses_student .table_courses table tbody tr td .contact.offline {
   background-color: #ffd4cb;
   color: #ff6746;
+}
+.content_profile_student .follow_up_links .table_links table tbody tr td .btns_actions,
+.content_profile_student .follow_up_links .table_courses table tbody tr td .btns_actions,
+.content_profile_student .courses_student .table_links table tbody tr td .btns_actions,
+.content_profile_student .courses_student .table_courses table tbody tr td .btns_actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+}
+.content_profile_student .follow_up_links .table_links table tbody tr td .btns_actions .btn_remove,
+.content_profile_student .follow_up_links .table_links table tbody tr td .btns_actions .btn_edite,
+.content_profile_student .follow_up_links .table_courses table tbody tr td .btns_actions .btn_remove,
+.content_profile_student .follow_up_links .table_courses table tbody tr td .btns_actions .btn_edite,
+.content_profile_student .courses_student .table_links table tbody tr td .btns_actions .btn_remove,
+.content_profile_student .courses_student .table_links table tbody tr td .btns_actions .btn_edite,
+.content_profile_student .courses_student .table_courses table tbody tr td .btns_actions .btn_remove,
+.content_profile_student .courses_student .table_courses table tbody tr td .btns_actions .btn_edite {
+  background-color: transparent;
+  border: none;
+}
+.content_profile_student .follow_up_links .table_links table tbody tr td .btns_actions .btn_remove i,
+.content_profile_student .follow_up_links .table_links table tbody tr td .btns_actions .btn_edite i,
+.content_profile_student .follow_up_links .table_courses table tbody tr td .btns_actions .btn_remove i,
+.content_profile_student .follow_up_links .table_courses table tbody tr td .btns_actions .btn_edite i,
+.content_profile_student .courses_student .table_links table tbody tr td .btns_actions .btn_remove i,
+.content_profile_student .courses_student .table_links table tbody tr td .btns_actions .btn_edite i,
+.content_profile_student .courses_student .table_courses table tbody tr td .btns_actions .btn_remove i,
+.content_profile_student .courses_student .table_courses table tbody tr td .btns_actions .btn_edite i {
+  font-size: 18px;
+}
+.content_profile_student .follow_up_links .table_links table tbody tr td .btns_actions .btn_remove,
+.content_profile_student .follow_up_links .table_courses table tbody tr td .btns_actions .btn_remove,
+.content_profile_student .courses_student .table_links table tbody tr td .btns_actions .btn_remove,
+.content_profile_student .courses_student .table_courses table tbody tr td .btns_actions .btn_remove {
+  color: rgb(220, 2, 20);
+}
+.content_profile_student .follow_up_links .table_links table tbody tr td .btns_actions .btn_edite,
+.content_profile_student .follow_up_links .table_courses table tbody tr td .btns_actions .btn_edite,
+.content_profile_student .courses_student .table_links table tbody tr td .btns_actions .btn_edite,
+.content_profile_student .courses_student .table_courses table tbody tr td .btns_actions .btn_edite {
+  color: #0d6efd;
+}
+.content_profile_student .follow_up_links .head_links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+  border-bottom: 1px solid rgb(210, 210, 210);
+  padding: 10px 20px;
+}
+.content_profile_student .follow_up_links .head_links h4 {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 0;
+  font-size: 16px;
+  cursor: pointer;
+}
+.content_profile_student .follow_up_links .head_links h4.active {
+  color: #1362fc;
+}
+.content_profile_student .follow_up_links .head_links h4.active::before {
+  content: "";
+  position: absolute;
+  bottom: -11px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #1362fc;
+}
+.content_profile_student .follow_up_links .table_links {
+  display: none;
+  margin-top: 0;
+}
+.content_profile_student .follow_up_links .table_links.active {
+  display: block;
 }
 .content_profile_student .courses_student {
   margin-top: 20px;
