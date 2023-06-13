@@ -358,13 +358,22 @@ $dark-text: #324664;
 
             .btn_accept,
             .btn_remove,
-            .btn_export {
+            .btn_export,
+            .btn_update {
               background-color: transparent;
               border: none;
             }
 
             .btn_accept {
               color: #37d159;
+
+              i {
+                font-size: 18px;
+              }
+            }
+
+            .btn_update {
+              color: #37d159 !important;
 
               i {
                 font-size: 18px;

@@ -203,13 +203,6 @@
                 </div>
                 <div class="inputs_switch">
                   <div class="input_switch">
-                    <span>لينكات المتابعه</span>
-                    <input type="checkbox" id="switch_links" /><label
-                      for="switch_links"
-                      >Toggle</label
-                    >
-                  </div>
-                  <div class="input_switch">
                     <span>الباقي</span>
                     <input type="checkbox" id="switch3" /><label for="switch3"
                       >Toggle</label
@@ -223,10 +216,18 @@
               <div class="left">
                 <div class="info_details_profile">
                   <div class="head_info">
-                    <h4>عني</h4>
+                    <h4
+                      class="btn_information active"
+                      data-section="Personal_information"
+                    >
+                      عني
+                    </h4>
+                    <h4 class="btn_information" data-section="abbreviations">
+                      الاختصارات
+                    </h4>
                   </div>
 
-                  <div class="Personal_information">
+                  <div class="Personal_information active">
                     <h5>معلومات شخصية</h5>
                     <div class="row">
                       <div class="col-12 col-md-6">
@@ -279,6 +280,59 @@
                       </div>
                     </div>
                   </div>
+                  <div class="Personal_information_abbreviations">
+                    <h5>اختصارات</h5>
+                    <div class="row">
+                      <div class="col-12 col-md-6">
+                        <div class="item">
+                          <h6 class="title">الاسم :</h6>
+                          <span>(n)</span>
+                        </div>
+                        <div class="item">
+                          <h6 class="title">الاسم بالانجليزيه :</h6>
+                          <span>(ne)</span>
+                        </div>
+                        <div class="item">
+                          <h6 class="title">الايميل :</h6>
+                          <span>(e)</span>
+                        </div>
+                        <div class="item">
+                          <h6 class="title">السن :</h6>
+                          <span>(a)</span>
+                        </div>
+                        <div class="item">
+                          <h6 class="title">رقم الموبيل:</h6>
+                          <span>(p)</span>
+                        </div>
+                        <div class="item">
+                          <h6 class="title">العنوان :</h6>
+                          <span>(ad)</span>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <div class="item">
+                          <h6 class="title">الجامعه:</h6>
+                          <span>(u)</span>
+                        </div>
+                        <div class="item">
+                          <h6 class="title">الكليه:</h6>
+                          <span>(c)</span>
+                        </div>
+                        <div class="item">
+                          <h6 class="title">الفرقه الدراسيه:</h6>
+                          <span>(t)</span>
+                        </div>
+                        <div class="item">
+                          <h6 class="title">الشهاده :</h6>
+                          <span>(ce)</span>
+                        </div>
+                        <div class="item">
+                          <h6 class="title">تاريخ التسجيل علي السستم :</h6>
+                          <span>(d)</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="right">
@@ -286,6 +340,12 @@
                   <div class="head_links">
                     <h4 class="btn_select_table active" data-table="follow">
                       لينكات لمتابعه
+                      <div class="input_switch">
+                        <input type="checkbox" id="switch_links" /><label
+                          for="switch_links"
+                          >Toggle</label
+                        >
+                      </div>
                     </h4>
                     <h4 class="btn_select_table" data-table="fawri">
                       اكواد فوري
@@ -376,13 +436,25 @@
             </div>
             <div class="courses_student">
               <div class="head_courses">
-                <h4>عن التدريب</h4>
+                <h4
+                  class="btn_course_switch active"
+                  data-section-course="table_courses"
+                >
+                  عن التدريب
+                </h4>
+                <h4
+                  class="btn_course_switch"
+                  data-section-course="table_courses_abbreviations"
+                >
+                  اختصارات التدريب
+                </h4>
               </div>
-              <div class="table_courses">
+
+              <div class="table_courses active">
                 <table>
                   <thead>
                     <tr>
-                      <th>اسم ال تدريب</th>
+                      <th>اسم التدريب</th>
                       <th>المعاد</th>
                       <th>طريقه الحضور</th>
                       <th>المبلغ المدفوع</th>
@@ -466,6 +538,50 @@
                     </tr>
                   </tbody>
                 </table>
+              </div>
+              <div class="table_courses_abbreviations">
+                <div class="row">
+                  <div class="col-12 col-md-6">
+                    <div class="item">
+                      <h6 class="title">اسم التدريب:</h6>
+                      <span>(t)</span>
+                    </div>
+                    <div class="item">
+                      <h6 class="title">المعاد:</h6>
+                      <span>(d)</span>
+                    </div>
+                    <div class="item">
+                      <h6 class="title">طريقه الحضور :</h6>
+                      <span>(a)</span>
+                    </div>
+                    <div class="item">
+                      <h6 class="title">المبلغ المدفوع :</h6>
+                      <span>(ap)</span>
+                    </div>
+                    <div class="item">
+                      <h6 class="title">المبلغ المتبقي:</h6>
+                      <span>(ra)</span>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <div class="item">
+                      <h6 class="title">الحاله :</h6>
+                      <span>(s)</span>
+                    </div>
+                    <div class="item">
+                      <h6 class="title">تاريخ الدفع الاول:</h6>
+                      <span>(d1)</span>
+                    </div>
+                    <div class="item">
+                      <h6 class="title">تاريخ الدفع التاني:</h6>
+                      <span>(d2)</span>
+                    </div>
+                    <div class="item">
+                      <h6 class="title">تاريخ الدفع الثالث :</h6>
+                      <span>(d3)</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -592,6 +708,49 @@
       btnClose.addEventListener("click", () => {
         popup.classList.remove("active");
         overflow.classList.remove("active");
+      });
+
+      // section information
+      const btnsInformation = document.querySelectorAll(".btn_information");
+      const PersonalInformationSection = document.querySelector(
+        ".Personal_information"
+      );
+      const PersonalInformationAbbreviations_sction = document.querySelector(
+        ".Personal_information_abbreviations"
+      );
+
+      btnsInformation.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          btnsInformation.forEach((ele) => ele.classList.remove("active"));
+          btn.classList.add("active");
+          if (btn.getAttribute("data-section") === "Personal_information") {
+            PersonalInformationSection.classList.add("active");
+            PersonalInformationAbbreviations_sction.classList.remove("active");
+          } else {
+            PersonalInformationSection.classList.remove("active");
+            PersonalInformationAbbreviations_sction.classList.add("active");
+          }
+        });
+      });
+
+      // section course
+      const btnsCourseSwitch = document.querySelectorAll(".btn_course_switch");
+      const tableCourses = document.querySelector(".table_courses");
+      const tableCoursesAbbreviations = document.querySelector(
+        ".table_courses_abbreviations"
+      );
+      btnsCourseSwitch.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          btnsCourseSwitch.forEach((ele) => ele.classList.remove("active"));
+          btn.classList.add("active");
+          if (btn.getAttribute("data-section-course") === "table_courses") {
+            tableCourses.classList.add("active");
+            tableCoursesAbbreviations.classList.remove("active");
+          } else {
+            tableCourses.classList.remove("active");
+            tableCoursesAbbreviations.classList.add("active");
+          }
+        });
       });
     </script>
   </body>

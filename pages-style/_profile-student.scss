@@ -129,21 +129,29 @@ $dark-text: #324664;
     .head_info {
       border-bottom: 1px solid rgb(210, 210, 210);
       padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      gap: 30px;
 
       h4 {
-        color: $primary-color;
         position: relative;
         width: fit-content;
         margin-bottom: 0;
+        font-size: 20px;
+        cursor: pointer;
 
-        &::before {
-          content: "";
-          position: absolute;
-          bottom: -11px;
-          left: 0;
-          width: 100%;
-          height: 1px;
-          background-color: $primary-color;
+        &.active {
+          color: $primary-color;
+
+          &::before {
+            content: "";
+            position: absolute;
+            bottom: -11px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: $primary-color;
+          }
         }
       }
     }
@@ -173,8 +181,14 @@ $dark-text: #324664;
       }
     }
 
-    .Personal_information {
+    .Personal_information,
+    .Personal_information_abbreviations {
       padding: 20px 20px 10px;
+      display: none;
+
+      &.active {
+        display: block;
+      }
 
       h5 {
         color: $primary-color;
@@ -209,21 +223,29 @@ $dark-text: #324664;
     .head_courses {
       border-bottom: 1px solid rgb(210, 210, 210);
       padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
 
       h4 {
-        color: $primary-color;
         position: relative;
         width: fit-content;
         margin-bottom: 0;
+        font-size: 20px;
+        cursor: pointer;
 
-        &::before {
-          content: "";
-          position: absolute;
-          bottom: -11px;
-          left: 0;
-          width: 100%;
-          height: 1px;
-          background-color: $primary-color;
+        &.active {
+          color: $primary-color;
+
+          &::before {
+            content: "";
+            position: absolute;
+            bottom: -11px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: $primary-color;
+          }
         }
       }
     }
@@ -346,6 +368,63 @@ $dark-text: #324664;
         margin-bottom: 0;
         font-size: 16px;
         cursor: pointer;
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        gap: 10px;
+
+        .input_switch {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+
+          span {
+            color: $dark-text;
+            font-weight: 600;
+          }
+
+          input[type="checkbox"] {
+            height: 0;
+            width: 0;
+            visibility: hidden;
+          }
+
+          label {
+            cursor: pointer;
+            text-indent: -9999px;
+            width: 40px;
+            height: 18px;
+            background: grey;
+            display: block;
+            border-radius: 100px;
+            position: relative;
+          }
+
+          label:after {
+            content: "";
+            position: absolute;
+            top: 3px;
+            left: 5px;
+            width: 12px;
+            height: 12px;
+            background: #fff;
+            border-radius: 90px;
+            transition: 0.3s;
+          }
+
+          input:checked + label {
+            background: #bada55;
+          }
+
+          input:checked + label:after {
+            left: calc(100% - 5px);
+            transform: translateX(-100%);
+          }
+
+          label:active:after {
+            width: 130px;
+          }
+        }
 
         &.active {
           color: $primary-color;
@@ -375,6 +454,36 @@ $dark-text: #324664;
 
   .courses_student {
     margin-top: 20px;
+
+    .table_courses,
+    .table_courses_abbreviations {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+
+    .table_courses_abbreviations {
+      padding: 20px 20px 10px;
+
+      .item {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        margin-bottom: 15px;
+
+        h6 {
+          color: $dark-text;
+          margin-bottom: 0;
+        }
+
+        span {
+          color: gray;
+          font-size: 15px;
+        }
+      }
+    }
   }
 }
 

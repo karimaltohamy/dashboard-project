@@ -1096,7 +1096,8 @@ main > .content > .right.scale {
 }
 .table_container .content table tbody tr td .btn_accept,
 .table_container .content table tbody tr td .btn_remove,
-.table_container .content table tbody tr td .btn_export {
+.table_container .content table tbody tr td .btn_export,
+.table_container .content table tbody tr td .btn_update {
   background-color: transparent;
   border: none;
 }
@@ -1104,6 +1105,12 @@ main > .content > .right.scale {
   color: #37d159;
 }
 .table_container .content table tbody tr td .btn_accept i {
+  font-size: 18px;
+}
+.table_container .content table tbody tr td .btn_update {
+  color: #37d159 !important;
+}
+.table_container .content table tbody tr td .btn_update i {
   font-size: 18px;
 }
 .table_container .content table tbody tr td .btn_remove {
@@ -2092,16 +2099,27 @@ main > .content > .right.scale {
 .content_profile_student .info_details_profile .head_info {
   border-bottom: 1px solid rgb(210, 210, 210);
   padding: 10px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
 }
 .content_profile_student .info_details_profile .head_info h4 {
-  color: #1362fc;
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   margin-bottom: 0;
+  font-size: 20px;
+  cursor: pointer;
 }
-.content_profile_student .info_details_profile .head_info h4::before {
+.content_profile_student .info_details_profile .head_info h4.active {
+  color: #1362fc;
+}
+.content_profile_student .info_details_profile .head_info h4.active::before {
   content: "";
   position: absolute;
   bottom: -11px;
@@ -2130,14 +2148,22 @@ main > .content > .right.scale {
 .content_profile_student .info_details_profile .bio p {
   color: gray;
 }
-.content_profile_student .info_details_profile .Personal_information {
+.content_profile_student .info_details_profile .Personal_information,
+.content_profile_student .info_details_profile .Personal_information_abbreviations {
   padding: 20px 20px 10px;
+  display: none;
 }
-.content_profile_student .info_details_profile .Personal_information h5 {
+.content_profile_student .info_details_profile .Personal_information.active,
+.content_profile_student .info_details_profile .Personal_information_abbreviations.active {
+  display: block;
+}
+.content_profile_student .info_details_profile .Personal_information h5,
+.content_profile_student .info_details_profile .Personal_information_abbreviations h5 {
   color: #1362fc;
   margin-bottom: 10px;
 }
-.content_profile_student .info_details_profile .Personal_information .item {
+.content_profile_student .info_details_profile .Personal_information .item,
+.content_profile_student .info_details_profile .Personal_information_abbreviations .item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2147,11 +2173,13 @@ main > .content > .right.scale {
   gap: 7px;
   margin-bottom: 15px;
 }
-.content_profile_student .info_details_profile .Personal_information .item h6 {
+.content_profile_student .info_details_profile .Personal_information .item h6,
+.content_profile_student .info_details_profile .Personal_information_abbreviations .item h6 {
   color: #324664;
   margin-bottom: 0;
 }
-.content_profile_student .info_details_profile .Personal_information .item span {
+.content_profile_student .info_details_profile .Personal_information .item span,
+.content_profile_student .info_details_profile .Personal_information_abbreviations .item span {
   color: gray;
   font-size: 15px;
 }
@@ -2166,18 +2194,30 @@ main > .content > .right.scale {
 .content_profile_student .courses_student .head_courses {
   border-bottom: 1px solid rgb(210, 210, 210);
   padding: 10px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
 }
 .content_profile_student .follow_up_links .head_courses h4,
 .content_profile_student .courses_student .head_courses h4 {
-  color: #1362fc;
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   margin-bottom: 0;
+  font-size: 20px;
+  cursor: pointer;
 }
-.content_profile_student .follow_up_links .head_courses h4::before,
-.content_profile_student .courses_student .head_courses h4::before {
+.content_profile_student .follow_up_links .head_courses h4.active,
+.content_profile_student .courses_student .head_courses h4.active {
+  color: #1362fc;
+}
+.content_profile_student .follow_up_links .head_courses h4.active::before,
+.content_profile_student .courses_student .head_courses h4.active::before {
   content: "";
   position: absolute;
   bottom: -11px;
@@ -2358,6 +2398,68 @@ main > .content > .right.scale {
   margin-bottom: 0;
   font-size: 16px;
   cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  gap: 10px;
+}
+.content_profile_student .follow_up_links .head_links h4 .input_switch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+}
+.content_profile_student .follow_up_links .head_links h4 .input_switch span {
+  color: #324664;
+  font-weight: 600;
+}
+.content_profile_student .follow_up_links .head_links h4 .input_switch input[type=checkbox] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+.content_profile_student .follow_up_links .head_links h4 .input_switch label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 40px;
+  height: 18px;
+  background: grey;
+  display: block;
+  border-radius: 100px;
+  position: relative;
+}
+.content_profile_student .follow_up_links .head_links h4 .input_switch label:after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 5px;
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-radius: 90px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.content_profile_student .follow_up_links .head_links h4 .input_switch input:checked + label {
+  background: #bada55;
+}
+.content_profile_student .follow_up_links .head_links h4 .input_switch input:checked + label:after {
+  left: calc(100% - 5px);
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+.content_profile_student .follow_up_links .head_links h4 .input_switch label:active:after {
+  width: 130px;
 }
 .content_profile_student .follow_up_links .head_links h4.active {
   color: #1362fc;
@@ -2380,6 +2482,35 @@ main > .content > .right.scale {
 }
 .content_profile_student .courses_student {
   margin-top: 20px;
+}
+.content_profile_student .courses_student .table_courses,
+.content_profile_student .courses_student .table_courses_abbreviations {
+  display: none;
+}
+.content_profile_student .courses_student .table_courses.active,
+.content_profile_student .courses_student .table_courses_abbreviations.active {
+  display: block;
+}
+.content_profile_student .courses_student .table_courses_abbreviations {
+  padding: 20px 20px 10px;
+}
+.content_profile_student .courses_student .table_courses_abbreviations .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 7px;
+  margin-bottom: 15px;
+}
+.content_profile_student .courses_student .table_courses_abbreviations .item h6 {
+  color: #324664;
+  margin-bottom: 0;
+}
+.content_profile_student .courses_student .table_courses_abbreviations .item span {
+  color: gray;
+  font-size: 15px;
 }
 
 @media (max-width: 768px) {
